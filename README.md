@@ -8,10 +8,10 @@
 
 
 ### 🧠 Most Used Languages
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=atikfaisal&layout=compact&theme=tokyonight)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ghosh-argha&layout=compact&theme=tokyonight)
+
 
 ### 📊 GitHub Stats
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=atikfaisal&show_icons=true&theme=tokyonight)
 
-### 🚀 Streak Stats
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=atikfaisal&theme=tokyonight)
+
