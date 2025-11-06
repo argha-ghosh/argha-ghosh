@@ -10,6 +10,12 @@
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight)
 ## ⚡ GitHub Stats
 ![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight)
+## ⚡ GitHub Stats
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight" height="150"/>
+</div>
+
 
 
 
