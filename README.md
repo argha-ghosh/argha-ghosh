@@ -4,13 +4,6 @@
 - 📫 How to reach me arghaghoshriddhi@gmail.com
 - 😄 Pronouns: .....Materials of worship.
 - ⚡ Fun fact: Addicted to gaming.
-## 👋 About Me
-<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400" alt="Coding and Gaming">
-
-- 💻 I'm Argha, a Computer Science Engineering student.  
-- 🌱 Currently learning **Web Development & Python**.  
-- 🎮 When I'm not coding, I'm gaming.  
-- 🚀 Always exploring new tech.
 
 <!--## 📊 GitHub Language Stats
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight)
