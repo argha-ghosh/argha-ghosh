@@ -24,10 +24,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
 
-## 🏗️ Featured Projects
-- 🛒 [Apon Mart](https://github.com/argha-ghosh/apon-mart) — Simple web-based store using HTML, CSS.
-- 📱 [To-Do App](https://github.com/argha-ghosh/todo-app) — Task manager built with JavaScript.
-- 💬 [Chat System](https://github.com/argha-ghosh/chat-system) — Real-time chat app using Python and Flask.
+## 🐍 Contribution Snake
+![Snake animation](https://github.com/argha-ghosh/argha-ghosh/blob/output/github-contribution-grid-snake.svg)
+
 
 
 
