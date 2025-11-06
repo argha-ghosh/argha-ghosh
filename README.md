@@ -4,10 +4,9 @@
 - 📫 How to reach me arghaghoshriddhi@gmail.com
 - 😄 Pronouns: .....Materials of worship.
 - ⚡ Fun fact: Addicted to gaming.
-- ## 🎮 Coding + Gaming Vibes
-<div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHZxZmE4M2E3ZmR1NzhqYWhpbXFlZmt4cmY4Y3d4eGZhdmM0bXVrZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="600" alt="Coding and Gaming">
-</div>
+## 🎮 Coding + Gaming Vibes
+<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHZxZmE4M2E3ZmR1NzhqYWhpbXFlZmt4cmY4Y3d4eGZhdmM0bXVrZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="400" alt="Coding and Gaming">
+
 
 
 
