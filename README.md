@@ -6,5 +6,9 @@
 - ⚡ Fun fact: Addicted to gaming.
 
 
+## 📊 GitHub Language Stats
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight)
+
+
 
 
