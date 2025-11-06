@@ -5,12 +5,13 @@
 - 😄 Pronouns: .....Materials of worship.
 - ⚡ Fun fact: Addicted to gaming.
 
-## 📊 GitHub Language Stats
+## ⚡ GitHub Stats
 <div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight" height="150"/>
+## 📊 GitHub Language Stats
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&cache_seconds=60"/>
 </div>
-## ⚡ GitHub Stats
-![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight)
+
 
 
 ## 🧠 Tech Stack
