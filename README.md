@@ -31,15 +31,19 @@
 
 <div align="center">
 
+<div align="center">
+
 ## ⚡ GitHub Analysis Dashboard
 
 ![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat)
 
 ![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true)
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&cache_seconds=60"/>
-(https://github-readme-streak-stats.herokuapp.com/?user=argha-ghosh&theme=tokyonight)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=argha-ghosh&theme=tokyonight)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
 
 </div>
+
 
 ## 🧠 Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
