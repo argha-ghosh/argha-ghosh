@@ -37,7 +37,7 @@
 
 ![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true)
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&cache_seconds=60"/>
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=argha-ghosh&theme=tokyonight)
+(https://github-readme-streak-stats.herokuapp.com/?user=argha-ghosh&theme=tokyonight)
 
 </div>
 
