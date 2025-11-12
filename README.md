@@ -6,6 +6,12 @@
 - ⚡ Fun fact: Addicted to gaming.
 
 
+Or even add a typing animation version (for a dynamic profile):
+
+```markdown
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=🚀+git+add+passion+&&+git+commit+-m+%22Always+learning%22+&&+git+push+success)](https://git.io/typing-svg)
+
+
 <div align="center">
 
 ## ⚡ GitHub Analysis Dashboard
