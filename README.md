@@ -6,12 +6,19 @@
 - ⚡ Fun fact: Addicted to gaming.
 
 
-## ⚡ GitHub Analysis Dashboard
 <div align="center">
-![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&count_private=true&hide_border=false&langs_count=10&cache_seconds=60)
-![GitHub Streak](https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=false)
+
+## ⚡ GitHub Analysis Dashboard
+
+![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat)
+
+![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=argha-ghosh&theme=tokyonight)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
+
 </div>
+
 
 
 
