@@ -5,9 +5,11 @@
 - 😄 Pronouns: .....Materials of worship.
 - ⚡ Fun fact: Addicted to gaming.
 
-```bash
-🚀 git add passion && git commit -m "Always learning" && git push success
+<div align="center">
 
+🚀 `git add passion && git commit -m "Always learning" && git push success`
+
+</div>
 
 <div align="center">
 
