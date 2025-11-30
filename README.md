@@ -7,16 +7,16 @@
 
 <div align="center">
 
+<!-- Profile views -->
 ![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat)
 
+<!-- GitHub overall stats -->
 ![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false)
 
+<!-- Top languages (force refresh every 60s while testing) -->
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&count_private=true&hide_border=false&langs_count=10&cache_seconds=60)
 
 </div>
-
-
-
 
 
 
