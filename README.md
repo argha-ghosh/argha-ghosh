@@ -7,12 +7,24 @@
 
 <div align="center">
 
+
+## 📊 GitHub Profile Dashboard
+<div align="center">
+
 <!-- Profile views -->
 ![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat)
 
+<!-- GitHub Overall Stats -->
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false)
+
+<!-- Top Languages -->
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&count_private=true&hide_border=false&langs_count=10)
+
+<!-- GitHub Contribution Streak -->
 ![GitHub Streak](https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=false)
+
+</div>
+
 
 </div>
 
