@@ -6,6 +6,10 @@
 
 </div>
 
+<div align="right">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="260" alt="Coding animation"/>
+</div>
+
 ---
 
 ## 👨‍💻 About Me
@@ -49,6 +53,15 @@
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 </p>
+
+---
+
+## 🔭 Currently Working On
+- 🛠 Improving problem-solving and algorithmic thinking  
+- 🌐 Building small web projects to strengthen fundamentals  
+- 📚 Learning clean code and best practices  
+
+*(This section makes your profile feel “alive” — many people don’t use it.)*
 
 ---
 
