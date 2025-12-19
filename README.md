@@ -28,14 +28,10 @@
 </tr>
 </table>
 
----
-
 <!--================ PROFILE VIEWS ================-->
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
-
----
 
 <!--================ GITHUB STATS ================-->
 ## ⚡ GitHub Analytics
@@ -51,7 +47,6 @@
   <img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=false" />
 </p>
 
----
 
 <!--================ TECH STACK ================-->
 ## 🧠 Tech Stack
@@ -65,7 +60,6 @@
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 </p>
 
----
 
 <!--================ CURRENTLY WORKING ON ================-->
 ## 🔭 Currently Working On
