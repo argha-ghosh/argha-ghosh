@@ -5,20 +5,21 @@
 - 😄 Pronouns: .....Materials of worship.
 - ⚡ Fun fact: Addicted to gaming.
 
-<div align="center">
-  
-![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat)
-
-</div>
+<!-- Profile Views -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
+</p>
 
 ## ⚡ GitHub Analysis Dashboard
+
 <div align="center">
 
-![Argha's GitHub stats](https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false)
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false" height="165" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&count_private=true&hide_border=false&langs_count=10&cache_seconds=60)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&count_private=true&hide_border=false&langs_count=10" height="165" />
 
 </div>
+
 
 
 ## 🧠 Tech Stack
