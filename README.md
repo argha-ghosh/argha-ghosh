@@ -1,3 +1,4 @@
+<!--================ PROFILE HEADER ================-->
 <div align="center">
 
 ## 👋 Hi, I'm Argha Ghosh
@@ -6,11 +7,10 @@
 
 </div>
 
-<div align="right">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="260" alt="Coding animation"/>
-</div>
-
----
+<!--================ SIDE-BY-SIDE ABOUT + GIF ================-->
+<table>
+<tr>
+<td width="65%" valign="top">
 
 ## 👨‍💻 About Me
 - 💻 Computer Science Engineering student  
@@ -19,16 +19,26 @@
 - 🎮 Gamer by passion, developer by choice  
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
+</td>
+<td width="35%" align="center">
+
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="260" alt="Coding Animation" />
+
+</td>
+</tr>
+</table>
+
 ---
 
+<!--================ PROFILE VIEWS ================-->
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 
 ---
 
+<!--================ GITHUB STATS ================-->
 ## ⚡ GitHub Analytics
-
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&count_private=true&hide_border=false" height="165" />
@@ -43,6 +53,7 @@
 
 ---
 
+<!--================ TECH STACK ================-->
 ## 🧠 Tech Stack
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
@@ -56,15 +67,15 @@
 
 ---
 
+<!--================ CURRENTLY WORKING ON ================-->
 ## 🔭 Currently Working On
 - 🛠 Improving problem-solving and algorithmic thinking  
 - 🌐 Building small web projects to strengthen fundamentals  
 - 📚 Learning clean code and best practices  
 
-*(This section makes your profile feel “alive” — many people don’t use it.)*
-
 ---
 
+<!--================ CONTRIBUTION GRAPH ================-->
 ## 📈 Contribution Activity
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
 
