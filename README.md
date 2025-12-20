@@ -10,17 +10,16 @@
 <!--================ SIDE-BY-SIDE ABOUT + GIF ================-->
 <table>
 <tr>
-<td width="65%" valign="top">
+<td width="70%" valign="top">
 
-## 👨‍💻 About Me
-- 💻 Computer Science Engineering student  
+## 👨‍💻 About Me 
 - 👀 Interested in **Desktop-Based Applications**  
 - 🌱 Currently learning **Web Development & Web Applications**  
 - 🎮 Gamer by passion, developer by choice  
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
 </td>
-<td width="35%" align="center">
+<td width="45%" align="center">
 
 <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="260" alt="Coding Animation" />
 
