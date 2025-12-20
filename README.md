@@ -10,7 +10,7 @@
 <!--================ SIDE-BY-SIDE ABOUT + GIF ================-->
 <table>
 <tr>
-<td width="70%" valign="top">
+<td width="70%" valign="center">
 
 ## 👨‍💻 About Me 
 - 👀 Interested in **Desktop-Based Applications**  
