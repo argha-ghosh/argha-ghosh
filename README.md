@@ -42,9 +42,6 @@
 
 </div>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=false" />
-</p>
 
 
 <!--================ TECH STACK ================-->
