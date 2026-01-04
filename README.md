@@ -79,20 +79,6 @@
 
 *(This section signals seriousness — many profiles skip it.)*
 
----
-
-## 📈 Contribution Activity
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
-
----
-
-<div align="center">
-
-💾 **git add . && git commit -m "Always learning" && git push**
-
-</div>
-
 
 <!--================ CURRENTLY WORKING ON ================-->
 ## 🔭 Currently Working On
