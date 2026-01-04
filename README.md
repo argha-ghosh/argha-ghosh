@@ -70,14 +70,6 @@
 
 </div>
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&row=1&column=6" />
-
-</div>
-
 ---
 
 ## 🚀 Featured Projects
@@ -107,6 +99,13 @@
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
 
 ---
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&row=1&column=6" />
+
+</div>
 
 <div align="center">
 
