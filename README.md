@@ -12,7 +12,7 @@
 <td width="60%" valign="top">
 
 ### 👨‍💻 About Me
-- 👀 Interested in **Desktop-Based Applications**
+- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
 - 🌱 Currently learning **Web Development & Web Applications**
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
