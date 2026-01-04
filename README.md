@@ -38,22 +38,13 @@
 
 <div align="center">
 
-<!-- GitHub Stats -->
-<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" height="165" />
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" height="160" />
 
-<!-- Top Languages -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&langs_count=8&hide_border=true" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&langs_count=8&hide_border=true" height="160" />
 
-</div>
-
-<div align="center">
-
-<!-- GitHub Streak -->
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true" />
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true" height="160" />
 
 </div>
-
-
 
 ---
 
@@ -79,6 +70,13 @@
 
 </div>
 
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&row=1&column=6" />
+
+</div>
 
 ---
 
