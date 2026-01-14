@@ -1,7 +1,6 @@
 <div align="center">
 
-## 👋 Hi, I'm Argha Ghosh  
-🚀 *Code is poetry, and every commit tells a story.*
+## 👋 Hi, I'm Ghosh, Argha
 
 </div>
 
@@ -67,16 +66,6 @@
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-
-</div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&row=1&column=6" />
 
 </div>
 
