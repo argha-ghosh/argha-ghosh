@@ -41,7 +41,7 @@
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&langs_count=8&hide_border=true" height="160" />
 
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true" height="160" />
+<!-- <img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true" height="160" /> -->
 
 </div>
 
