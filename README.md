@@ -79,8 +79,8 @@
 - 🧠 **AI Algorithms Practice**  
   Implementations of Hill Climbing, Minimax, Genetic Algorithms, and heuristic search.
 
-- 🌐 **Web Development Mini Projects**  
-  Hands-on projects using HTML, CSS, JavaScript for frontend fundamentals.
+- 🌐 **Web Development Projects**  
+  Hands-on projects using TypeScript, Nest JS, JavaScript for backend fundamentals.
 
 *(This section signals seriousness — many profiles skip it.)*
 
