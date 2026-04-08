@@ -62,6 +62,11 @@
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
 
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+
 </div>
 
 ---
@@ -71,8 +76,8 @@
 - ✈️ **Online Flight Ticket Booking System**  
   Role-based web application with Admin, Airline Manager, Passenger & Check-In Staff modules.
 
-- 🧠 **AI Algorithms Practice**  
-  Implementations of Hill Climbing, Minimax, Genetic Algorithms, and heuristic search.
+- 🧠 **Restaurant Managment System**  
+  Implementations of Customer, Manager, Admin, Paying Method via Bkash, Card etc.
 
 - 🌐 **Web Development Projects**  
   Hands-on projects using TypeScript, Nest JS, JavaScript for backend fundamentals.
