@@ -1,13 +1,13 @@
 <div align="center">
-## 👋 Hi, I'm Ghosh, Argha | Web developer
+## 👋 Hi, I'm Ghosh, Argha
 </div>
 ---
 <table align="center">
 <tr>
 <td width="60%" valign="top">
 ### 👨‍💻 About Me
-- 👀 Interested in **Desktop-Based Applications, Web Application => Ask me about this, feel free!**
-- 🌱 Currently learning **Web Development & Web Applications via ASP .NET**
+- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
+- 🌱 Currently learning **Web Development & Web Applications**
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 </td>
@@ -67,5 +67,3 @@
 <div align="center">
 💾 **Code. Add. Commit. Push. Repeat.**
 </div>
-
-For this now edit by yourself. Made it more freshly, add language or frame works or etc. Add facebook, instagram, github, mail, outlook link with icon. Give me wonderfull look now. You can also add anything you widh
