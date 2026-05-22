@@ -108,16 +108,6 @@ fun_fact: "I debug with coffee ☕ and win with code 🏆"
 
 ---
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=7)
-
-</div>
-
----
-
 ## 🚀 Featured Projects
 
 <div align="center">
@@ -126,7 +116,7 @@ fun_fact: "I debug with coffee ☕ and win with code 🏆"
 |:---:|:---|:---:|
 | ✈️ **Online Flight Ticket Booking** | Role-based system with Admin, Airline Manager, Passenger & Check-In Staff modules | PHP · MySQL · HTML/CSS |
 | 🍽️ **Restaurant Management System** | Full system with Customer, Manager, Admin & Payment via bKash and Card | PHP · MySQL · JS |
-| 🌐 **Web Dev Projects** | Backend-focused projects strengthening API and server-side fundamentals | TypeScript · NestJS · Node |
+| 🌐 **City Complaint Managment** | Backend-focused projects strengthening API and server-side fundamentals | TypeScript · NestJS · Node |
 | 🖥️ **Desktop Applications** | Standalone GUI apps with clean architecture and rich functionality | C# · .NET · Java |
 
 </div>
@@ -136,13 +126,13 @@ fun_fact: "I debug with coffee ☕ and win with code 🏆"
 ## 🔭 Currently Working On
 
 ```
-╔══════════════════════════════════════════════════════════════╗
-║  🛠  Improving problem-solving & algorithmic thinking        ║
-║  🌐  Building real-world web apps from scratch               ║
-║  📚  Mastering clean code principles & design patterns       ║
-║  🔗  Exploring REST APIs & backend architecture              ║
-║  🎯  Targeting a full-stack developer role                   ║
-╚══════════════════════════════════════════════════════════════╝
+
+  🛠  Improving problem-solving & algorithmic thinking        
+  🌐  Building real-world web apps from scratch               
+  📚  Mastering clean code principles & design patterns       
+  🔗  Exploring REST APIs & backend architecture              
+  🎯  Targeting a full-stack developer role                   
+
 ```
 
 ---
