@@ -1,25 +1,67 @@
 <div align="center">
 
-## 👋 Hi, I'm Ghosh, Argha
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Argha%20Ghosh&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Developer%20%7C%20Gamer%20%7C%20Problem%20Solver&descAlignY=58&descSize=18&animation=fadeIn" width="100%"/>
+
+</div>
+
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&random=false&width=600&lines=Desktop+App+Developer+%F0%9F%96%A5%EF%B8%8F;Web+Developer+in+Progress+%F0%9F%8C%90;Gamer+by+Passion+%F0%9F%8E%AE;Clean+Code+Enthusiast+%E2%9C%A8;Code.+Add.+Commit.+Push.+Repeat+%F0%9F%94%81)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-<table align="center">
-<tr>
-<td width="60%" valign="top">
+## 🌐 Connect With Me
 
-### 👨‍💻 About Me
-- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
-- 🌱 Currently learning **Web Development & Web Applications**
-- 🎮 Gamer by passion, developer by choice
-- 📫 Reach me at **arghaghoshriddhi@gmail.com**
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/YOUR_IG_USERNAME)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
+[![Outlook](https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:YOUR_OUTLOOK@outlook.com)
+[![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile+Views&color=00d4ff&style=for-the-badge)](https://github.com/argha-ghosh)
+
+</div>
+
+---
+
+## 👨‍💻 About Me
+
+<table>
+<tr>
+<td width="55%" valign="top">
+
+```yaml
+name       : Argha Ghosh
+location   : India 🇮🇳
+role       : Desktop App Dev → Web Dev
+passion    : Gaming + Building Things
+email      : arghaghoshriddhi@gmail.com
+
+focus:
+  - Desktop Application Architecture
+  - Full-Stack Web Development
+  - Clean Code & Best Practices
+  - Algorithmic Problem Solving
+
+currently_learning:
+  - TypeScript & React ⚛️
+  - NestJS Backend Framework 🚀
+  - PostgreSQL & Database Design 🗄️
+
+fun_fact    : "I debug with coffee ☕ and win with code 🏆"
+```
 
 </td>
-<td width="40%" align="center">
+<td width="45%" align="center">
 
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="Coding gif"/>
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="240" alt="Coding gif" style="border-radius:12px"/>
+
+<br/>
+
+![Snake animation](https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg)
 
 </td>
 </tr>
@@ -27,9 +69,67 @@
 
 ---
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20Views&color=0e75b6&style=flat" />
-</div>
+## 🧠 Tech Stack & Tools
+
+<details open>
+<summary><b>💻 Languages</b></summary>
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>🌐 Frontend</b></summary>
+<br/>
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>⚙️ Backend & Frameworks</b></summary>
+<br/>
+
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>🗄️ Databases</b></summary>
+<br/>
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>🛠️ Tools & Platforms</b></summary>
+<br/>
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+</details>
 
 ---
 
@@ -37,35 +137,13 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true" height="160" />
-</div>
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4ff&icon_color=00d4ff&text_color=ffffff&border_radius=10" height="165"/>
+&nbsp;&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4ff&text_color=ffffff&border_radius=10" height="165"/>
 
----
+<br/><br/>
 
-## 🧠 Tech Stack
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
-<img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black"/>
-<img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-<img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&theme=tokyonight&hide_border=true&background=0d1117&ring=00d4ff&fire=ff6b6b&currStreakLabel=00d4ff&border_radius=10" height="165"/>
 
 </div>
 
@@ -73,34 +151,65 @@
 
 ## 🚀 Featured Projects
 
-- ✈️ **Online Flight Ticket Booking System**  
-  Role-based web application with Admin, Airline Manager, Passenger & Check-In Staff modules.
+<div align="center">
 
-- 🧠 **Restaurant Managment System**  
-  Implementations of Customer, Manager, Admin, Paying Method via Bkash, Card etc.
+| 🗂️ Project | 📝 Description | 🛠️ Stack |
+|:---:|:---|:---:|
+| ✈️ **Online Flight Ticket Booking** | Role-based system with Admin, Airline Manager, Passenger & Check-In Staff modules | PHP · MySQL · HTML/CSS |
+| 🍽️ **Restaurant Management System** | Full-featured system with Customer, Manager, Admin & Payment integration (bKash, Card) | PHP · MySQL · JS |
+| 🌐 **Web Dev Projects** | Backend-focused projects strengthening API and server-side fundamentals | TypeScript · NestJS · Node |
+| 🖥️ **Desktop Applications** | Standalone GUI apps with rich functionality and clean architecture | C# · .NET · Java |
 
-- 🌐 **Web Development Projects**  
-  Hands-on projects using TypeScript, Nest JS, JavaScript for backend fundamentals.
-
-*(This section signals seriousness — many profiles skip it.)*
-
-
-<!--================ CURRENTLY WORKING ON ================-->
-## 🔭 Currently Working On
-- 🛠 Improving problem-solving and algorithmic thinking  
-- 🌐 Building small web projects to strengthen fundamentals  
-- 📚 Learning clean code and best practices  
+</div>
 
 ---
 
-<!--================ CONTRIBUTION GRAPH ================-->
+## 🔭 Currently Working On
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║  🛠  Improving problem-solving & algorithmic thinking        ║
+║  🌐  Building real-world web apps from scratch               ║
+║  📚  Mastering clean code principles & design patterns       ║
+║  🔗  Exploring REST APIs & backend architecture              ║
+║  🎯  Targeting a full-stack developer role                   ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+---
+
 ## 📈 Contribution Activity
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night)
+
+<div align="center">
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&theme=tokyo-night&hide_border=true&area=true&bg_color=0d1117&color=00d4ff&line=00d4ff&point=ffffff)
+
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+![Trophies](https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=7)
+
+</div>
+
+---
+
+## 🎮 Random Dev Quote
+
+<div align="center">
+
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+
+</div>
 
 ---
 
 <div align="center">
 
-💾 **Code. Add. Commit. Push. Repeat.**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer&text=💾+Code.+Add.+Commit.+Push.+Repeat.&fontSize=20&fontColor=00d4ff&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 </div>
