@@ -1,6 +1,6 @@
 <div align="center">
 
-## 👋 Hi, I'm Ghosh, Argha
+## 👋 Hi, I'm Ghosh, Argha |  **Web Developer**
 
 </div>
 
