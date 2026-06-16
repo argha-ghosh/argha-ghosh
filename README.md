@@ -1,16 +1,35 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0f0c29,50:302b63,100:24243e&height=150&text=Argha%20Ghosh&fontSize=46&fontColor=ffffff&fontAlignY=42&desc=Full-Stack%20Developer%20%7C%20Desktop%20App%20Enthusiast%20%7C%20Problem%20Solver&descAlignY=68&descSize=15" width="100%"/>
+## 👋 Hi, I'm Ghosh, Argha
 
-<br/>
+</div>
 
-[![Location](https://img.shields.io/badge/Location-Dhaka%2C%20Bangladesh-7c3aed?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-argha--ghosh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
-[![Email](https://img.shields.io/badge/Email-arghaghoshriddhi%40gmail.com-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
+---
 
-[![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile+Views&color=7c3aed&style=for-the-badge)](https://github.com/argha-ghosh)
-[![Followers](https://img.shields.io/github/followers/argha-ghosh?label=Followers&style=for-the-badge&color=7c3aed&logo=github&logoColor=white)](https://github.com/argha-ghosh?tab=followers)
+<table align="center">
+<tr>
+<td width="60%" valign="top">
 
+### 👨‍💻 About Me
+
+- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
+- 🌱 Currently learning **Web Development & Web Applications**
+- 🎮 Gamer by passion, developer by choice
+- 📫 Reach me at **arghaghoshriddhi@gmail.com**
+
+</td>
+<td width="40%" align="center">
+
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="Coding gif"/>
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20Views&color=0e75b6&style=flat" />
 </div>
 
 ---
