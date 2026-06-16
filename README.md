@@ -45,16 +45,6 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ---
 
-### 👨‍💻 About Me
-
-I'm a Computer Science student building real, working software — from full-stack web platforms to native desktop applications. Most of my recent work centers on backend architecture, REST API design, and database-driven systems, paired with a genuine interest in clean code and maintainable structure over quick hacks.
-
-**🎯 Open To**
-- Internships and collaborative development projects
-- Full-stack / backend development opportunities
-- Conversations about desktop application development — feel free to ask!
-
----
 
 ### 🧠 Tech Stack
 
