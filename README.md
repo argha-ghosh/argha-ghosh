@@ -227,6 +227,3 @@ focus:
 
 <sub>💾 Code. Add. Commit. Push. Repeat.</sub>
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:24243e,50:302b63,100:0f0c29&height=60&section=footer" width="100%"/>
-
-</div>
