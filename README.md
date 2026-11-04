@@ -91,40 +91,6 @@ I'm a Computer Science student building real, working software — from full-sta
 | **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
 
 ---
-<details>
-<summary><b>📚 PathSathi — Tutor Matching Mobile App</b></summary>
-
-<br/>
-
-A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
-
-| Field | Detail |
-|---|---|
-| **Stack** | React Native · Expo · ASP.NET Core Web API |
-| **Role** | Module Owner (Tutor) |
-| **Team** | Group 08 · 4 members |
-| **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
-| **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
-
-**📱 Mobile App Features**
-
-| Role | Features |
-|---|---|
-| **Student / Guardian** | Find tutors, post tuition requests, review applicants, accept or reject |
-| **Tutor** *(my module)* | Tutor profile, tuition board, apply to tuitions, My Applications tracking |
-| **Moderator** | Verify tutors, review reports |
-| **Admin** | Suspend users, manage moderators and categories |
-
-**⚙️ ASP.NET Core Features**
-
-- RESTful Web API serving the mobile client
-- JWT-based authentication with role-based authorization (Student, Tutor, Moderator, Admin)
-- Entity Framework Core with a relational database for users, profiles, tuition posts and applications
-- Application workflow endpoints: post tuition, apply, accept/reject, track status
-- Moderation and admin endpoints: tutor verification, report review, user suspension, category management
-- DTO-based request/response models with validation
-
-</details>
 
 ### 🚀 Featured Projects
 
@@ -193,6 +159,32 @@ Standalone GUI applications exploring native desktop architecture and clean code
 </details>
 
 ---
+
+<details>
+<summary><b>📚 PathSathi — Tutor Matching Mobile App</b></summary>
+
+<br/>
+
+A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
+
+| Field | Detail |
+|---|---|
+| **Stack** | React Native · Expo · ASP.NET Core Web API |
+| **Role** | Module Owner (Tutor) |
+| **Team** | Group 08 · 4 members |
+| **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
+
+**📱 Mobile App Features**
+
+| Role | Features |
+|---|---|
+| **Student / Guardian** | Find tutors, post tuition requests, review applicants, accept or reject |
+| **Tutor** *(my module)* | Tutor profile, tuition board, apply to tuitions, My Applications tracking |
+| **Moderator** | Verify tutors, review reports |
+| **Admin** | Suspend users, manage moderators and categories |
+
+</details>
 
 ### ⚡ GitHub Analytics
 
