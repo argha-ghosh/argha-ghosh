@@ -188,37 +188,23 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 
 ### ⚡ GitHub Analytics
 
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/>
-&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/>
+<div align="center"> <img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/> &nbsp; <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/>
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&background=0D1117&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=6E7681&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=10" height="165"/>
-
-</div>
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&background=0D1117&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=6E7681&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=10" height="165"/> </div>
 
 ---
 
 ### 🏆 GitHub Trophies
 
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=dracula&no-frame=true&no-bg=true&margin-w=8&column=7"/>
-
-</div>
+<div align="center"> <img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=dracula&no-frame=true&no-bg=true&margin-w=8&column=7"/> </div>
 
 ---
 
 ### 📈 Contribution Activity
 
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&bg_color=0d1117&color=8b5cf6&line=8b5cf6&point=ffffff&hide_border=true&area=true" width="100%"/>
-
-</div>
+<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&bg_color=0d1117&color=8b5cf6&line=8b5cf6&point=ffffff&hide_border=true&area=true" width="100%"/> </div>
 
 ---
 
