@@ -63,6 +63,9 @@ I'm a Computer Science student building real, working software — from full-sta
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
@@ -85,8 +88,43 @@ I'm a Computer Science student building real, working software — from full-sta
 | **Backend Architecture & APIs** | Designing modular REST API structures and JWT-based authentication for multi-developer codebases |
 | **Database Design** | Relational schema design and query handling across PostgreSQL and MySQL projects |
 | **Desktop Application Development** | Exploring native desktop architecture with C# and .NET alongside web development |
+| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
 
 ---
+<details>
+<summary><b>📚 PathSathi — Tutor Matching Mobile App</b></summary>
+
+<br/>
+
+A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
+
+| Field | Detail |
+|---|---|
+| **Stack** | React Native · Expo · ASP.NET Core Web API |
+| **Role** | Module Owner (Tutor) |
+| **Team** | Group 08 · 4 members |
+| **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
+
+**📱 Mobile App Features**
+
+| Role | Features |
+|---|---|
+| **Student / Guardian** | Find tutors, post tuition requests, review applicants, accept or reject |
+| **Tutor** *(my module)* | Tutor profile, tuition board, apply to tuitions, My Applications tracking |
+| **Moderator** | Verify tutors, review reports |
+| **Admin** | Suspend users, manage moderators and categories |
+
+**⚙️ ASP.NET Core Features**
+
+- RESTful Web API serving the mobile client
+- JWT-based authentication with role-based authorization (Student, Tutor, Moderator, Admin)
+- Entity Framework Core with a relational database for users, profiles, tuition posts and applications
+- Application workflow endpoints: post tuition, apply, accept/reject, track status
+- Moderation and admin endpoints: tutor verification, report review, user suspension, category management
+- DTO-based request/response models with validation
+
+</details>
 
 ### 🚀 Featured Projects
 
