@@ -158,8 +158,6 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 </details>
 
----
-
 <details>
 <summary><b>📚 PathSathi — Tutor Matching Mobile App</b></summary>
 
@@ -185,6 +183,7 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 | **Admin** | Suspend users, manage moderators and categories |
 
 </details>
+---
 
 ### ⚡ GitHub Analytics
 
