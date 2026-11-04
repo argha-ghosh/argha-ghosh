@@ -1,6 +1,6 @@
 <div align="center">
 
-## 👋 Hi, I'm Ghosh, Argha
+## 👋 Hi, I'm Ghosh, Argha | Software Engineer
 
 </div>
 
@@ -183,6 +183,7 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 | **Admin** | Suspend users, manage moderators and categories |
 
 </details>
+
 ---
 
 ### ⚡ GitHub Analytics
