@@ -188,11 +188,31 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 
 ### ⚡ GitHub Analytics
 
-<div align="center"> <img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/> &nbsp; <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9&border_radius=10" height="165"/>
+<div align="center">
 
-<br/><br/>
+<table align="center" width="100%">
+<tr>
+<td width="50%" align="center" valign="middle">
 
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&background=0D1117&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=6E7681&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=10" height="165"/> </div>
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=8b5cf6&icon_color=8b5cf6&text_color=c9d1d9&border_radius=12&card_width=420" width="100%" alt="GitHub Stats"/>
+
+</td>
+<td width="50%" align="center" valign="middle">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=donut&langs_count=8&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9&border_radius=12&card_width=420" width="100%" alt="Top Languages"/>
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center" valign="middle">
+
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&background=0D1117&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=6E7681&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=12" width="60%" alt="GitHub Streak"/>
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
