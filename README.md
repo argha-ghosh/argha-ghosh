@@ -225,15 +225,6 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ---
 
-### 📈 Contribution Activity
-
-<div align="center">
-
-<img src="https://ghchart.rshah.org/8b5cf6/argha-ghosh" width="100%" alt="Contribution chart"/>
-
-<br/><br/>
-</div>
-
 **🐍 The snake is eating my contributions...**
 
 <div align="center">
