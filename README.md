@@ -1,16 +1,11 @@
 # 👋 Hello, I'm Argha Ghosh | Software Freak
+
+---
 <div align="center">
 
 <img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
 
 <br/>
-
-![Open To](https://img.shields.io/badge/Open_to-Internships_%26_Collabs-8b5cf6?style=for-the-badge&logo=handshake&logoColor=white)
-![Focus](https://img.shields.io/badge/Focus-Full--Stack_%7C_Backend_%7C_Mobile-a78bfa?style=for-the-badge)
-[![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20Views&color=8b5cf6&style=for-the-badge)](https://github.com/argha-ghosh)
-[![Followers](https://img.shields.io/github/followers/argha-ghosh?style=for-the-badge&logo=github&color=8b5cf6&labelColor=181717)](https://github.com/argha-ghosh?tab=followers)
-
-</div>
 
 ---
 
