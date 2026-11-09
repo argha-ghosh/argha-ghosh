@@ -199,7 +199,7 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 </td>
 <td width="50%" align="center" valign="middle">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=donut&langs_count=8&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9&border_radius=12&card_width=420" width="100%" alt="Top Languages"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=argha-ghosh&theme=github_dark" width="100%" alt="Top Languages"/>
 
 </td>
 </tr>
