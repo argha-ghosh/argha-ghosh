@@ -1,17 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
-
-<a href="https://github.com/argha-ghosh">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=8B5CF6&center=true&vCenter=true&width=720&height=50&lines=Hi%2C+I'm+Argha+Ghosh+%F0%9F%91%8B;Full-Stack+%26+Backend+Developer;Mobile+Apps+with+React+Native+%2B+ASP.NET+Core;Desktop+App+Explorer+(C%23+%2F+.NET);Building+PathSathi+%F0%9F%93%9A" alt="Typing animation"/>
-</a>
-
-<br/>
-
-![Open To](https://img.shields.io/badge/Open_to-Internships_%26_Collabs-8b5cf6?style=for-the-badge&logo=handshake&logoColor=white)
-![Focus](https://img.shields.io/badge/Focus-Full--Stack_%7C_Backend_%7C_Mobile-a78bfa?style=for-the-badge)
-[![Profile Views](https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20Views&color=8b5cf6&style=for-the-badge)](https://github.com/argha-ghosh)
-[![Followers](https://img.shields.io/github/followers/argha-ghosh?style=for-the-badge&logo=github&color=8b5cf6&labelColor=181717)](https://github.com/argha-ghosh?tab=followers)
+## 👋 Hi, I'm Argha Ghosh | Software Engineer
 
 </div>
 
@@ -23,9 +12,8 @@
 
 ### 👨‍💻 About Me
 
-- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
-- 🌱 Currently learning **Web Development & Web Applications**
-- 📱 Building **PathSathi**, a tutor-matching mobile app (React Native + ASP.NET Core)
+- 👀 Interested in **Desktop Applications | Web Application => Ask me about this, feel free!**
+- 🌱 Currently learning **Mobile Application Development**
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
@@ -40,9 +28,15 @@
 
 ---
 
-### 🙋‍♂️ Who I Am
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=argha-ghosh&label=Profile%20Views&color=0e75b6&style=flat" />
+</div>
 
-I'm a Computer Science student building real, working software — from full-stack web platforms and native desktop applications to cross-platform mobile apps. Most of my recent work centers on backend architecture, REST API design, and database-driven systems, paired with a genuine interest in clean code and maintainable structure over quick hacks.
+---
+
+### 👨‍💻 About Me
+
+I'm a Computer Science student building real, working software — from full-stack web platforms to native desktop applications. Most of my recent work centers on backend architecture, REST API design, and database-driven systems, paired with a genuine interest in clean code and maintainable structure over quick hacks.
 
 **🎯 Open To**
 - Internships and collaborative development projects
@@ -51,9 +45,10 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ---
 
+
 ### 🧠 Tech Stack
 
-**💻 Languages**
+**Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -64,27 +59,18 @@ I'm a Computer Science student building real, working software — from full-sta
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-**🎨 Frontend & Mobile**
-
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-
-**⚙️ Backend & Databases**
-
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
-**🛠️ Tools & Workflow**
-
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -99,40 +85,14 @@ I'm a Computer Science student building real, working software — from full-sta
 | Domain | Details |
 |---|---|
 | **Full-Stack Web Development** | Building end-to-end apps with NestJS, PostgreSQL, TypeORM, and Next.js — auth flows, REST APIs, role-based modules |
-| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
 | **Backend Architecture & APIs** | Designing modular REST API structures and JWT-based authentication for multi-developer codebases |
 | **Database Design** | Relational schema design and query handling across PostgreSQL and MySQL projects |
 | **Desktop Application Development** | Exploring native desktop architecture with C# and .NET alongside web development |
+| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
 
 ---
 
 ### 🚀 Featured Projects
-
-<details open>
-<summary><b>📚 PathSathi — Tutor Matching Mobile App</b> 🆕</summary>
-
-<br/>
-
-A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
-
-| Field | Detail |
-|---|---|
-| **Stack** | React Native · Expo · ASP.NET Core Web API |
-| **Role** | Module Owner (Tutor) |
-| **Team** | Group 08 · 4 members |
-| **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
-| **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
-
-**📱 Mobile App Features**
-
-| Role | Features |
-|---|---|
-| **Student / Guardian** | Find tutors, post tuition requests, review applicants, accept or reject |
-| **Tutor** *(my module)* | Tutor profile, tuition board, apply to tuitions, My Applications tracking |
-| **Moderator** | Verify tutors, review reports |
-| **Admin** | Suspend users, manage moderators and categories |
-
-</details>
 
 <details>
 <summary><b>🏙️ ZonePortal — City Complaint Management System</b></summary>
@@ -175,7 +135,7 @@ A management system with Customer, Manager, and Admin roles, including integrate
 
 | Field | Detail |
 |---|---|
-| **Stack** | PHP · MySQL · JavaScript |
+| **Stack** | C# · SQL SERVER MANAGMENT STUDIO(SSMS) |
 | **Role** | Developer |
 | **Highlights** | Multi-role dashboards, payment gateway integration |
 | **Repository** | [View Repo](#) |
@@ -198,17 +158,59 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 </details>
 
+<details>
+<summary><b>📚 PathSathi — Tutor Matching Mobile App</b></summary>
+
+<br/>
+
+A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
+
+| Field | Detail |
+|---|---|
+| **Stack** | React Native · Expo  |
+| **Role** | Module Owner (Tutor) |
+| **Team** | Group 08 · 4 members |
+| **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
+
+**📱 Mobile App Features**
+
+| Role | Features |
+|---|---|
+| **Student / Guardian** | Find tutors, post tuition requests, review applicants, accept or reject |
+| **Tutor** *(my module)* | Tutor profile, tuition board, apply to tuitions, My Applications tracking |
+| **Moderator** | Verify tutors, review reports |
+| **Admin** | Suspend users, manage moderators and categories |
+
+</details>
+
 ---
 
-### 📊 GitHub Statistics
+### ⚡ GitHub Analytics
 
 <div align="center">
 
-<img src="assets/github-stats.svg" width="580" alt="GitHub Stats"/>
-<br/>
-<img src="assets/github-languages.svg" width="580" alt="Most Used Languages"/>
-<br/>
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=false&stroke=C4B5FD&background=00000000&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=8B5CF6&dates=6B7280&currStreakNum=8B5CF6&sideNums=8B5CF6&border_radius=16" width="580" alt="GitHub Streak"/>
+<table align="center" width="100%">
+<tr>
+<td width="50%" align="center" valign="middle">
+
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=8b5cf6&icon_color=8b5cf6&text_color=c9d1d9&border_radius=12&card_width=420" width="100%" alt="GitHub Stats"/>
+
+</td>
+<td width="50%" align="center" valign="middle">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=argha-ghosh&theme=github_dark" width="100%" alt="Top Languages"/>
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center" valign="middle">
+
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&background=0D1117&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=C9D1D9&dates=6E7681&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=12" width="60%" alt="GitHub Streak"/>
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -226,21 +228,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ### 📈 Contribution Activity
 
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&bg_color=0d1117&color=8b5cf6&line=8b5cf6&point=ffffff&hide_border=true&area=true" width="100%" alt="Contribution graph"/>
-
-<br/><br/>
-
-**🐍 The snake is eating my contributions...**
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" />
-  <img alt="Snake animation eating my contribution graph" src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" width="100%" />
-</picture>
-
-</div>
+<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&bg_color=0d1117&color=8b5cf6&line=8b5cf6&point=ffffff&hide_border=true&area=true" width="100%"/> </div>
 
 ---
 
@@ -252,7 +240,6 @@ focus:
     - Advanced TypeScript patterns
     - Clean architecture & SOLID principles
   building:
-    - PathSathi (React Native + Expo + ASP.NET Core)
     - ZonePortal (NestJS + PostgreSQL + Next.js)
   exploring:
     - Desktop application development (C# / .NET)
@@ -263,35 +250,19 @@ focus:
 
 ---
 
-### 🎮 Fun Facts
-
-<details>
-<summary><b>Click to reveal</b></summary>
-
-<br/>
-
-- 🎮 Gamer first, developer second (or is it the other way around?)
-- 🖥️ Desktop apps are my favorite playground — ask me anything about C# / .NET
-- 🧹 I prefer clean, maintainable code over quick hacks
-- ☕ Code → Commit → Push → Repeat
-
-</details>
-
----
-
-### 🌐 Let's Connect
+### 🌐 Connect
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/YOUR_IG_USERNAME)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
 
-<br/>
+</div>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&center=true&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
+---
+
+<div align="center">
 
 <sub>💾 Code. Add. Commit. Push. Repeat.</sub>
 
-</div>
