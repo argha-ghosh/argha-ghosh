@@ -3,10 +3,6 @@
 
 <img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
 
-<a href="https://github.com/argha-ghosh">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=8B5CF6&center=true&vCenter=true&width=720&height=50&lines=Hi%2C+I'm+Argha+Ghosh+%F0%9F%91%8B;Full-Stack+%26+Backend+Developer;Mobile+Apps+with+React+Native+%2B+ASP.NET+Core;Desktop+App+Explorer+(C%23+%2F+.NET);Building+PathSathi+%F0%9F%93%9A" alt="Typing animation"/>
-</a>
-
 <br/>
 
 ![Open To](https://img.shields.io/badge/Open_to-Internships_%26_Collabs-8b5cf6?style=for-the-badge&logo=handshake&logoColor=white)
