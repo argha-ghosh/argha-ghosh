@@ -232,15 +232,16 @@ Standalone GUI applications exploring native desktop architecture and clean code
 <img src="https://ghchart.rshah.org/8b5cf6/argha-ghosh" width="100%" alt="Contribution chart"/>
 
 <br/><br/>
+</div>
 
 **🐍 The snake is eating my contributions...**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" />
-  <img alt="Snake animation eating my contributions" src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" width="100%" />
-</picture>
-
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake.svg"/>
+    <img src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" width="100%"/>
+  </picture>
 </div>
 ---
 
