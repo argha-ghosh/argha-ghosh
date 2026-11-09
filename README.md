@@ -216,9 +216,13 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 
 ---
 
-### 🏆 GitHub Trophies
+### 🏆 GitHub Achievements
 
-<div align="center"> <img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=dracula&no-frame=true&no-bg=true&margin-w=8&column=7"/> </div>
+<div align="center">
+
+<img src="assets/github-achievements.svg" width="100%" alt="GitHub Milestones"/>
+
+</div>
 
 ---
 
