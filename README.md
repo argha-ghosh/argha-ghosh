@@ -1,4 +1,4 @@
-# 👋 Hello, I'm Argha Ghosh | Software Engineer 
+# 👋 Hello, I'm Argha Ghosh | Software Freak
 <div align="center">
 
 <img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
