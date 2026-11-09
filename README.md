@@ -229,7 +229,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=argha-ghosh&bg_color=0d1117&color=8b5cf6&line=8b5cf6&point=ffffff&hide_border=true&area=true" width="100%" alt="Contribution graph"/>
+<img src="https://ghchart.rshah.org/8b5cf6/argha-ghosh" width="100%" alt="Contribution chart"/>
 
 <br/><br/>
 
@@ -238,11 +238,10 @@ Standalone GUI applications exploring native desktop architecture and clean code
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" />
-  <img alt="Snake animation eating my contribution graph" src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" width="100%" />
+  <img alt="Snake animation eating my contributions" src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-snake.svg" width="100%" />
 </picture>
 
 </div>
-
 ---
 
 ### 🔭 Current Focus
