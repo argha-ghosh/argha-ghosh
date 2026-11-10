@@ -8,14 +8,11 @@
 
 </div>
 
-<br/>
-
-
 ---
 
-<table align="center">
+<table width="100%">
 <tr>
-<td width="60%" valign="top">
+<td width="55%" valign="top">
 
 ### 👨‍💻 About Me
 
@@ -26,9 +23,9 @@
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
 </td>
-<td width="40%" align="left">
+<td width="45%" align="center" valign="middle">
 
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="Coding gif"/>
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" alt="Coding gif"/>
 
 </td>
 </tr>
