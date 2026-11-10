@@ -14,13 +14,13 @@
 <tr>
 <td width="55%" valign="top">
 
-### 👨‍💻 About Me
+<h2>👨‍💻 About Me</h2>
 
-- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
-- 🌱 Currently learning **Mobile App Development**
-- 📱 Building Web Application & Desktop Application
-- 🎮 Gamer by passion, developer by choice
-- 📫 Reach me at **arghaghoshriddhi@gmail.com**
+<h3>👀 Interested in <b>Desktop-Based Applications</b> => Ask me about this, feel free!</h3>
+<h3>🌱 Currently learning <b>Mobile App Development</b></h3>
+<h3>📱 Building Web Application &amp; Desktop Application</h3>
+<h3>🎮 Gamer by passion, developer by choice</h3>
+<h3>📫 Reach me at <b>arghaghoshriddhi@gmail.com</b></h3>
 
 </td>
 <td width="45%" align="center" valign="middle">
@@ -34,6 +34,7 @@
 <br clear="all"/>
 
 ---
+<div align="left">
 
 ### 🙋‍♂️ Who I Am
 
@@ -86,6 +87,8 @@ I'm a Computer Science student building real, working software — from full-sta
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+</div>
 
 ---
 
