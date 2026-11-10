@@ -2,8 +2,6 @@
   
 # 👋 Hello, I'm Argha Ghosh | Software Engineer
 
-</div>
-
 <div align="center">
 
 <img src="assets/computer.svg" alt="Argha Ghosh - computer boot animation" width="100%"/>
