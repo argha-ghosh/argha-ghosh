@@ -198,7 +198,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ### 📊 GitHub Statistics
 
-<div align="left">
+<div align="center">
 
 <img src="assets/github-stats.svg" width="580" alt="GitHub Stats"/>
 <br/>
