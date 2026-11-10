@@ -1,15 +1,25 @@
 # 👋 Hello, I'm Argha Ghosh | Software Freak
+<<<<<<< HEAD
 
 
 <div align="center">
 
 <img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
 
+=======
+<div align="left">
+
+<img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
+
+<a href="https://github.com/argha-ghosh">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=8B5CF6&vCenter=true&width=720&height=50&lines=Hi%2C+I'm+Argha+Ghosh+%F0%9F%91%8B;Full-Stack+%26+Backend+Developer;Mobile+Apps+with+React+Native+%2B+ASP.NET+Core;Desktop+App+Explorer+(C%23+%2F+.NET);Building+PathSathi+%F0%9F%93%9A" alt="Typing animation"/>
+</a>
+
 <br/>
 
 ---
 
-<table align="center">
+<table align="left">
 <tr>
 <td width="60%" valign="top">
 
@@ -22,13 +32,15 @@
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
 </td>
-<td width="40%" align="center">
+<td width="40%" align="left">
 
 <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="Coding gif"/>
 
 </td>
 </tr>
 </table>
+
+<br clear="all"/>
 
 ---
 
@@ -194,7 +206,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ### 📊 GitHub Statistics
 
-<div align="center">
+<div align="left">
 
 <img src="assets/github-stats.svg" width="580" alt="GitHub Stats"/>
 <br/>
@@ -208,7 +220,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ### 🏆 GitHub Achievements
 
-<div align="center">
+<div align="left">
 
 <img src="assets/github-achievements.svg" width="100%" alt="GitHub Milestones"/>
 
@@ -218,7 +230,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 **🐍 The snake is eating my contributions...**
 
-<div align="center">
+<div align="left">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake.svg"/>
@@ -264,7 +276,7 @@ focus:
 
 ### 🌐 Let's Connect
 
-<div align="center">
+<div align="left">
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
@@ -273,7 +285,7 @@ focus:
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&center=true&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
 
 <sub>💾 Code. Add. Commit. Push. Repeat.</sub>
 
