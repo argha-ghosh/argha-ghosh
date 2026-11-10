@@ -1,6 +1,4 @@
-# 👋 Hello, I'm Argha Ghosh | Software Freak
-<<<<<<< HEAD
-
+# 👋 Hello, I'm Argha Ghosh | Software Engineer
 
 <div align="center">
 
