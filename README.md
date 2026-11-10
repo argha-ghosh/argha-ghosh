@@ -1,60 +1,51 @@
 <div align="center">
-  
-# 👋 Hello, I'm Argha Ghosh | Software Engineer
-
-</div>
-
-<div align="left">
 
 <img src="assets/banner.svg" alt="Argha Ghosh - Building the future, one commit at a time" width="100%"/>
 
-<!-- <a href="https://github.com/argha-ghosh">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=8B5CF6&vCenter=true&width=720&height=50&lines=Hi%2C+I'm+Argha+Ghosh+%F0%9F%91%8B;Full-Stack+%26+Backend+Developer;Mobile+Apps+with+React+Native+%2B+ASP.NET+Core;Desktop+App+Explorer+(C%23+%2F+.NET);Building+PathSathi+%F0%9F%93%9A" alt="Typing animation"/>
-</a> -->
+# 👋 Hi, I'm Argha Ghosh
+### Software Engineer · Full-Stack · Mobile · Desktop
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/argha-ghosh)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/YOUR_IG_USERNAME)
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&pause=1200&color=8B5CF6&center=true&vCenter=true&width=680&height=40&lines=Full-Stack+%26+Backend+Developer;Mobile+Apps+with+React+Native+%2B+ASP.NET+Core;Desktop+App+Explorer+(C%23+%2F+.NET);Building+PathSathi+%F0%9F%93%9A;Always+learning%2C+always+building." alt="Typing animation"/>
 
 </div>
 
-<br/>
-
 ---
 
-<table align="center">
+## 👨‍💻 About Me
+
+<table>
 <tr>
-<td width="60%" valign="top">
+<td width="55%" valign="top">
 
-### 👨‍💻 About Me
+I'm a Computer Science student building real, working software — from full-stack web platforms and native desktop applications to cross-platform mobile apps. Most of my recent work centers on backend architecture, REST API design, and database-driven systems, paired with a genuine interest in clean code and maintainable structure over quick hacks.
 
-- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
-- 🌱 Currently learning **Web Development & Web Applications**
-- 📱 Building **PathSathi**, a tutor-matching mobile app (React Native + ASP.NET Core)
+- 🔭 Currently building **PathSathi** — a tutor-matching mobile app (React Native + ASP.NET Core)
+- 🌱 Learning **Advanced TypeScript** and **Clean Architecture**
+- 🖥️ Passionate about **Desktop-Based Applications** — feel free to ask!
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
-</td>
-<td width="40%" align="left">
+**🎯 Open To**
+- Internships and collaborative development projects
+- Full-stack / backend development opportunities
 
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="Coding gif"/>
+</td>
+<td width="45%" align="center" valign="top">
+
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="260" alt="Coding gif"/>
 
 </td>
 </tr>
 </table>
 
-<br clear="all"/>
-
 ---
 
-### 🙋‍♂️ Who I Am
-
-I'm a Computer Science student building real, working software — from full-stack web platforms and native desktop applications to cross-platform mobile apps. Most of my recent work centers on backend architecture, REST API design, and database-driven systems, paired with a genuine interest in clean code and maintainable structure over quick hacks.
-
-**🎯 Open To**
-- Internships and collaborative development projects
-- Full-stack / backend development opportunities
-- Conversations about desktop application development — feel free to ask!
-
----
-
-### 🧠 Tech Stack
+## 🧠 Tech Stack
 
 **💻 Languages**
 
@@ -81,7 +72,6 @@ I'm a Computer Science student building real, working software — from full-sta
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
@@ -97,26 +87,26 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ---
 
-### 🧩 Core Competencies
+## 🧩 Core Competencies
 
 | Domain | Details |
 |---|---|
-| **Full-Stack Web Development** | Building end-to-end apps with NestJS, PostgreSQL, TypeORM, and Next.js — auth flows, REST APIs, role-based modules |
-| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
-| **Backend Architecture & APIs** | Designing modular REST API structures and JWT-based authentication for multi-developer codebases |
-| **Database Design** | Relational schema design and query handling across PostgreSQL and MySQL projects |
-| **Desktop Application Development** | Exploring native desktop architecture with C# and .NET alongside web development |
+| **Full-Stack Web Development** | End-to-end apps with NestJS, PostgreSQL, TypeORM, and Next.js — auth flows, REST APIs, role-based modules |
+| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs |
+| **Backend Architecture & APIs** | Modular REST API design and JWT-based authentication for multi-developer codebases |
+| **Database Design** | Relational schema design and query handling across PostgreSQL and MySQL |
+| **Desktop Application Development** | Native desktop architecture with C# and .NET |
 
 ---
 
-### 🚀 Featured Projects
+## 🚀 Featured Projects
 
 <details open>
 <summary><b>📚 PathSathi — Tutor Matching Mobile App</b> 🆕</summary>
 
 <br/>
 
-A cross-platform mobile app (Education & Learning) that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course. Module owner for the Tutor side.
+A cross-platform mobile app that connects students and guardians with tutors. Students post tuition requests or browse tutors, tutors build profiles and apply, and students accept or reject applicants. Built as a 4-member group project for the Mobile Application Development course.
 
 | Field | Detail |
 |---|---|
@@ -125,8 +115,6 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 | **Team** | Group 08 · 4 members |
 | **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
 | **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
-
-**📱 Mobile App Features**
 
 | Role | Features |
 |---|---|
@@ -142,7 +130,7 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 
 <br/>
 
-A full-stack civic complaint management platform built for a university course, handling complaint submission, a Corporation → Zone → Ward location hierarchy, tracking, and feedback. Module owner for ZoneOfficer, working alongside a team on Admin and Auth modules.
+A full-stack civic complaint management platform handling complaint submission, a Corporation → Zone → Ward location hierarchy, tracking, and feedback. Module owner for ZoneOfficer.
 
 | Field | Detail |
 |---|---|
@@ -203,42 +191,46 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ---
 
-### 📊 GitHub Statistics
+## 📊 GitHub Statistics
 
 <div align="center">
 
-<img src="assets/github-stats.svg" width="580" alt="GitHub Stats"/>
+<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=00000000&title_color=8B5CF6&icon_color=8B5CF6&text_color=cdd6f4&ring_color=8B5CF6" width="49%" alt="GitHub Stats"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=8B5CF6&text_color=cdd6f4&langs_count=8" width="49%" alt="Top Languages"/>
+
 <br/>
-<img src="assets/github-languages.svg" width="580" alt="Most Used Languages"/>
-<br/>
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=false&stroke=C4B5FD&background=00000000&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=8B5CF6&dates=6B7280&currStreakNum=8B5CF6&sideNums=8B5CF6&border_radius=16" width="580" alt="GitHub Streak"/>
+
+<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=true&stroke=C4B5FD&background=00000000&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=8B5CF6&dates=6B7280&currStreakNum=8B5CF6&sideNums=8B5CF6&border_radius=16" width="60%" alt="GitHub Streak"/>
 
 </div>
 
 ---
 
-### 🏆 GitHub Achievements
+## 🏆 GitHub Achievements
 
-<div align="left">
+<div align="center">
 
-<img src="assets/github-achievements.svg" width="100%" alt="GitHub Milestones"/>
+<img src="https://github-profile-trophy.vercel.app/?username=argha-ghosh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7" width="100%" alt="GitHub Trophies"/>
 
 </div>
 
 ---
 
-**🐍 The snake is eating my contributions...**
+## �️ Pac-Man Eats My Contributions...
 
-<div align="left">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake.svg"/>
-    <img src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" width="100%"/>
-  </picture>
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/pacman-contribution-graph-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/pacman-contribution-graph.svg"/>
+  <img src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/pacman-contribution-graph-dark.svg" alt="Pac-Man contribution graph" width="100%"/>
+</picture>
+
 </div>
+
 ---
 
-### 🔭 Current Focus
+## 🔭 Current Focus
 
 ```yaml
 focus:
@@ -257,7 +249,7 @@ focus:
 
 ---
 
-### 🎮 Fun Facts
+## 🎮 Fun Facts
 
 <details>
 <summary><b>Click to reveal</b></summary>
@@ -273,18 +265,9 @@ focus:
 
 ---
 
-### 🌐 Let's Connect
+<div align="center">
 
-<div align="left">
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/YOUR_IG_USERNAME)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&center=true&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
 
 <sub>💾 Code. Add. Commit. Push. Repeat.</sub>
 
