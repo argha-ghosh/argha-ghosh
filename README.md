@@ -10,7 +10,6 @@
 
 <br/>
 
-<br/>
 
 ---
 
@@ -21,8 +20,8 @@
 ### 👨‍💻 About Me
 
 - 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
-- 🌱 Currently learning **Web Development & Web Applications**
-- 📱 Building **PathSathi**, a tutor-matching mobile app (React Native + ASP.NET Core)
+- 🌱 Currently learning **Mobile App Development**
+- 📱 Building Web Application & Desktop Application
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
