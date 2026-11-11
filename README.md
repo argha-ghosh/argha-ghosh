@@ -14,13 +14,17 @@
 <tr>
 <td width="55%" valign="top">
 
-<h2>👨‍💻 About Me</h2>
 
-<h3>👀 Interested in <b>Desktop-Based Applications</b> => Ask me about this, feel free!</h3>
-<h3>🌱 Currently learning <b>Mobile App Development</b></h3>
-<h3>📱 Building Web Application &amp; Desktop Application</h3>
-<h3>🎮 Gamer by passion, developer by choice</h3>
-<h3>📫 Reach me at <b>arghaghoshriddhi@gmail.com</b></h3>
+### 👨‍💻 About Me
+
+- 👀 Interested in **Desktop-Based Applications => Ask me about this, feel free!**
+- 🌱 Currently learning **Mobile App Development**
+- 📱 Building Web Application & Desktop Application
+- 🎮 Gamer by passion, developer by choice
+- 📫 Reach me at **arghaghoshriddhi@gmail.com**
+
+Box er moddher ey likha gula ektu boro kora jai na?
+
 
 </td>
 <td width="45%" align="center" valign="middle">
@@ -49,7 +53,6 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ### 🧠 Tech Stack
 
-**💻 Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -60,17 +63,11 @@ I'm a Computer Science student building real, working software — from full-sta
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-**🎨 Frontend & Mobile**
-
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-
-**⚙️ Backend & Databases**
-
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -78,9 +75,6 @@ I'm a Computer Science student building real, working software — from full-sta
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
-**🛠️ Tools & Workflow**
-
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -104,9 +98,11 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ---
 
+<div align="left">
+
 ### 🚀 Featured Projects
 
-<details open>
+<details>
 <summary><b>📚 PathSathi — Tutor Matching Mobile App</b> 🆕</summary>
 
 <br/>
@@ -196,6 +192,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 </details>
 
+</div>
 ---
 
 ### 📊 GitHub Statistics
