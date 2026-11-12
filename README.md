@@ -200,18 +200,13 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=argha-ghosh&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=00000000&title_color=8B5CF6&icon_color=8B5CF6&text_color=cdd6f4&ring_color=8B5CF6" height="180" alt="GitHub Stats"/>
-</td>
-<td align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=argha-ghosh&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=8B5CF6&text_color=cdd6f4&langs_count=8" height="180" alt="Most Used Languages"/>
-</td>
-</tr>
-</table>
+<img src="assets/stats.svg" width="360" alt="GitHub Stats"/>
+&nbsp;&nbsp;
+<img src="assets/languages.svg" width="360" alt="Most Used Languages"/>
 
-<img src="https://streak-stats.demolab.com?user=argha-ghosh&hide_border=false&stroke=C4B5FD&background=00000000&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=8B5CF6&dates=6B7280&currStreakNum=8B5CF6&sideNums=8B5CF6&border_radius=16" width="580" alt="GitHub Streak"/>
+<br/><br/>
+
+<img src="assets/streak.svg" width="740" alt="GitHub Streak"/>
 
 </div>
 
