@@ -211,7 +211,7 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ### 🏆 GitHub Achievements
 
-<div align="left">
+<div align="center">
 
 <img src="assets/achievements.svg" width="810" alt="Achievements"/>
 
