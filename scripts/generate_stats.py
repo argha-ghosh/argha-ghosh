@@ -8,6 +8,7 @@ TOKEN = os.environ["GH_TOKEN"]
 USER = os.environ.get("GH_USER", "argha-ghosh")
 HEADERS = {"Authorization": f"bearer {TOKEN}"}
 EXCLUDE_LANGS = set()  # e.g. {"HTML", "CSS"}
+MAX_LANGS = 10         # er beshi language thakle baki gulo "Other" e jabe
 
 
 def gql(query, variables=None):
@@ -143,19 +144,71 @@ def stats_svg(d):
     return frame(w, h, body)
 
 
-def langs_svg(d):
-    w, h = 400, 250
-    items = sorted(d["langs"].items(), key=lambda x: x[1]["size"], reverse=True)[:6]
+def lang_items(d):
+    """(name, fraction, color) list, boro theke choto. MAX_LANGS er beshi hole 'Other'."""
+    items = sorted(d["langs"].items(), key=lambda x: x[1]["size"], reverse=True)
     total = sum(v["size"] for _, v in items) or 1
+    if len(items) > MAX_LANGS:
+        shown, rest = items[:MAX_LANGS - 1], items[MAX_LANGS - 1:]
+        out = [(n, v["size"] / total, v["color"]) for n, v in shown]
+        out.append(("Other", sum(v["size"] for _, v in rest) / total, "#6b7280"))
+        return out
+    return [(n, v["size"] / total, v["color"]) for n, v in items]
+
+
+def pct_text(p):
+    return "&lt;1%" if p < 0.01 else f"{p * 100:.1f}%"
+
+
+def short(name, n=17):
+    return name if len(name) <= n else name[:n - 1] + "…"
+
+
+def langs_svg(d):
+    """Donut chart + shob language-er legend."""
+    w, h = 400, 250
+    items = lang_items(d)
+    cx, cy, r, sw = 105, 155, 58, 18
+    circ = 2 * math.pi * r
+    gap = 2 if len(items) > 1 else 0
+
     body = header("Most Used Languages", w)
-    for i, (name, v) in enumerate(items):
-        y = 88 + i * 27
-        pct = v["size"] / total
-        body += f'<circle cx="30" cy="{y-5}" r="4" fill="{v["color"]}"/>'
-        body += f'<text x="42" y="{y}">{escape(name)}</text>'
-        body += f'<text x="375" y="{y}" text-anchor="end" class="v">{pct*100:.1f}%</text>'
-        body += f'<rect x="25" y="{y+8}" width="350" height="6" rx="3" fill="#2d2a4a"/>'
-        body += f'<rect x="25" y="{y+8}" width="{max(pct*350, 6):.1f}" height="6" rx="3" fill="{v["color"]}"/>'
+    body += f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#2d2a4a" stroke-width="{sw}"/>'
+    segs, off = "", 0.0
+    for _, pct, color in items:
+        seg = max(pct * circ - gap, 0.8)
+        segs += (f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" '
+                 f'stroke-width="{sw}" stroke-dasharray="{seg:.2f} {circ - seg:.2f}" '
+                 f'stroke-dashoffset="{-off:.2f}"/>')
+        off += pct * circ
+    body += f'<g transform="rotate(-90 {cx} {cy})">{segs}</g>'
+    body += f'<text x="{cx}" y="{cy + 4}" text-anchor="middle" class="big" style="font-size:26px">{len(d["langs"])}</text>'
+    body += f'<text x="{cx}" y="{cy + 22}" text-anchor="middle" class="m">languages</text>'
+
+    row_h = min(26, 160 / max(len(items), 1))
+    fs = min(14, row_h - 4)
+    for i, (name, pct, color) in enumerate(items):
+        y = 80 + row_h * (i + 0.75)
+        body += f'<circle cx="203" cy="{y - fs * 0.35:.1f}" r="4" fill="{color}"/>'
+        body += f'<text x="215" y="{y:.1f}" style="font-size:{fs:.0f}px">{escape(short(name))}</text>'
+        body += f'<text x="375" y="{y:.1f}" text-anchor="end" class="v" style="font-size:{fs:.0f}px">{pct_text(pct)}</text>'
+    return frame(w, h, body)
+
+
+def langs_bars_svg(d):
+    """Bar list version, shob language shoho."""
+    w, h = 400, 250
+    items = lang_items(d)
+    body = header("Most Used Languages", w)
+    row_h = min(28, 160 / max(len(items), 1))
+    fs = min(14, row_h - 4)
+    for i, (name, pct, color) in enumerate(items):
+        y = 80 + row_h * (i + 0.75)
+        body += f'<circle cx="30" cy="{y - fs * 0.35:.1f}" r="4" fill="{color}"/>'
+        body += f'<text x="42" y="{y:.1f}" style="font-size:{fs:.0f}px">{escape(short(name, 16))}</text>'
+        body += f'<rect x="170" y="{y - fs * 0.6:.1f}" width="150" height="6" rx="3" fill="#2d2a4a"/>'
+        body += f'<rect x="170" y="{y - fs * 0.6:.1f}" width="{max(pct * 150, 5):.1f}" height="6" rx="3" fill="{color}"/>'
+        body += f'<text x="375" y="{y:.1f}" text-anchor="end" class="v" style="font-size:{fs:.0f}px">{pct_text(pct)}</text>'
     return frame(w, h, body)
 
 
@@ -190,7 +243,9 @@ def streak_svg(d):
 if __name__ == "__main__":
     data = fetch()
     os.makedirs("assets", exist_ok=True)
-    for name, fn in [("stats", stats_svg), ("languages", langs_svg), ("streak", streak_svg)]:
+    outputs = [("stats", stats_svg), ("languages", langs_svg),
+               ("languages-bars", langs_bars_svg), ("streak", streak_svg)]
+    for name, fn in outputs:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
             f.write(fn(data))
-    print("done:", {k: v for k, v in data.items() if k != "langs"})
+    print("done:", {k: v for k, v in data.items() if k != "langs"}, "| languages:", len(data["langs"]))
