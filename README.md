@@ -103,7 +103,7 @@ I'm a Computer Science student building real, working software — from full-sta
 ### 🚀 Featured Projects
 
 <details>
-<summary><b>📚 PathSathi — Tutor Matching Mobile App</b> 🆕</summary>
+<summary><b>📚 PathSathi — Tutor Matching Mobile App</b> </summary>
 
 <br/>
 
@@ -193,6 +193,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 </details>
 
 </div>
+
 ---
 
 ### 📊 GitHub Statistics
@@ -232,7 +233,8 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 ### 🔭 Current Focus
 
-```yaml
+<div align="left">
+
 focus:
   learning:
     - Advanced TypeScript patterns
@@ -245,11 +247,14 @@ focus:
   open_to:
     - Internships & collaborative projects
     - Full-stack development opportunities
-```
+
+</div>
 
 ---
 
 ### 🎮 Fun Facts
+
+<div align="left">
 
 <details>
 <summary><b>Click to reveal</b></summary>
@@ -262,6 +267,8 @@ focus:
 - ☕ Code → Commit → Push → Repeat
 
 </details>
+
+</div>
 
 ---
 
