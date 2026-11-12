@@ -44,8 +44,8 @@ I'm a Computer Science student building real, working software — from full-sta
 
 **🎯 Open To**
 - Internships and collaborative development projects
-- Full-stack / backend development opportunities
-- Conversations about desktop application development — feel free to ask!
+- Full-stack / frontend & backend both development opportunities
+- Conversations about software development — feel free to ask!
 
 ---
 
@@ -89,10 +89,10 @@ I'm a Computer Science student building real, working software — from full-sta
 | Domain | Details |
 |---|---|
 | **Full-Stack Web Development** | Building end-to-end apps with NestJS, PostgreSQL, TypeORM, and Next.js — auth flows, REST APIs, role-based modules |
-| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by ASP.NET Core REST APIs and role-based flows |
+| **Mobile Application Development** | Cross-platform apps with React Native + Expo, backed by __________ REST APIs and role-based flows |
 | **Backend Architecture & APIs** | Designing modular REST API structures and JWT-based authentication for multi-developer codebases |
-| **Database Design** | Relational schema design and query handling across PostgreSQL and MySQL projects |
-| **Desktop Application Development** | Exploring native desktop architecture with C# and .NET alongside web development |
+| **Database Design** | Relational schema design and query handling across PostgreSQL, SSMS and MySQL projects |
+| **Desktop Application Development** | Exploring native desktop architecture with C# and .NET alongside desktop development |
 
 ---
 
@@ -109,9 +109,9 @@ A cross-platform mobile app (Education & Learning) that connects students and gu
 
 | Field | Detail |
 |---|---|
-| **Stack** | React Native · Expo · ASP.NET Core Web API |
+| **Stack** | React Native · Expo · ___________ |
 | **Role** | Module Owner (Tutor) |
-| **Team** | Group 08 · 4 members |
+| **Team** | PathSathi · 4 members |
 | **Highlights** | 4 role-based user types, tutor verification flow, tuition board with apply/accept/reject |
 | **Repository** | [View Repo](https://github.com/argha-ghosh/PathSathi) |
 
@@ -138,7 +138,7 @@ A full-stack civic complaint management platform built for a university course, 
 | **Stack** | NestJS · PostgreSQL · TypeORM · Next.js |
 | **Role** | Module Owner (ZoneOfficer) |
 | **Highlights** | JWT auth (localStorage + cookies), ~35-route Postman API reference, merged dual codebases |
-| **Repository** | [View Repo](#) |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/Complain-Managment-System-Frontend-Backend-) |
 
 </details>
 
@@ -154,7 +154,7 @@ A role-based flight ticket booking platform covering Admin, Manager, and Passeng
 | **Stack** | PHP · MySQL · JavaScript · XAMPP |
 | **Role** | Solo Developer |
 | **Highlights** | IATA airport-code cards, notification system, Chart.js analytics dashboard |
-| **Repository** | [View Repo](#) |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/Online-flight-ticket-booking-system) |
 
 </details>
 
@@ -163,30 +163,30 @@ A role-based flight ticket booking platform covering Admin, Manager, and Passeng
 
 <br/>
 
-A management system with Customer, Manager, and Admin roles, including integrated payment handling via bKash and card.
+A desktop based management system with Customer, Manager, and Admin roles, including integrated payment handling via bKash and card.
 
 | Field | Detail |
 |---|---|
-| **Stack** | PHP · MySQL · JavaScript |
+| **Stack** | C#, .NET Framework Core, SSMSSQL  |
 | **Role** | Developer |
-| **Highlights** | Multi-role dashboards, payment gateway integration |
-| **Repository** | [View Repo](#) |
+| **Highlights** | Multi-role dashboards, payment gateway |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/BHOJ) |
 
 </details>
 
 <details>
-<summary><b>🖥️ Desktop Applications</b></summary>
+<summary><b>🌱 ZeroHunger</b></summary>
 
 <br/>
 
-Standalone GUI applications exploring native desktop architecture and clean code structure.
+A .NET Web API that coordinates restaurant food donations, rider collection, and distribution to people in need, with JWT-based role authorization.
 
 | Field | Detail |
 |---|---|
-| **Stack** | C# · .NET · Java |
+| **Stack** | C#, .NET 10, ASP.NET Core Web API, Entity Framework Core, 3Tier Application Setup for Multi Level Development, SQL Server, AutoMapper, JWT |
 | **Role** | Developer |
-| **Highlights** | Native UI design, OOP-based architecture |
-| **Repository** | [View Repo](#) |
+| **Highlights** | 3-layer architecture (DAL/BLL/API), rider assignment with auto status updates, role-based access (Admin, Restaurant, Rider, Reviewer) |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/Zero-Hunger) |
 
 </details>
 
@@ -213,7 +213,7 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 <div align="left">
 
-<img src="assets/github-achievements.svg" width="100%" alt="GitHub Milestones"/>
+<img src="assets/achievements.svg" width="810" alt="Achievements"/>
 
 </div>
 

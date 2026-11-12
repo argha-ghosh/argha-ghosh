@@ -44,11 +44,12 @@ YEAR = """query($u:String!,$f:DateTime!,$t:DateTime!){user(login:$u){
 def fetch():
     base = gql(BASE, {"u": USER})["user"]
 
-    stars, langs, cursor = 0, {}, None
+    stars, langs, cursor, repo_count = 0, {}, None, 0
     while True:
         repos = gql(REPOS, {"u": USER, "c": cursor})["user"]["repositories"]
         for repo in repos["nodes"]:
             stars += repo["stargazerCount"]
+            repo_count += 1
             for e in repo["languages"]["edges"]:
                 name = e["node"]["name"]
                 if name in EXCLUDE_LANGS:
@@ -89,6 +90,7 @@ def fetch():
         "contrib": base["repositoriesContributedTo"]["totalCount"],
         "total": sum(n for _, n in series),
         "current": current, "longest": longest,
+        "repos": repo_count,
         "langs": langs,
     }
 
@@ -240,11 +242,71 @@ def streak_svg(d):
     return frame(w, h, body)
 
 
+BADGES = [
+    # (emoji, title, key, tiers, unit)
+    ("🕒", "Committer", "commits", [10, 100, 500, 1000, 5000], ("commit", "commits")),
+    ("⭐", "Star Collector", "stars", [1, 10, 50, 100, 500], ("star", "stars")),
+    ("🔀", "Pull Shark", "prs", [1, 10, 50, 100, 500], ("pull request", "pull requests")),
+    ("🔥", "Streak Master", "longest", [3, 7, 30, 100, 365], ("day best streak", "days best streak")),
+    ("📦", "Repo Builder", "repos", [1, 5, 10, 25, 50], ("repository", "repositories")),
+    ("🌐", "Polyglot", "nlangs", [1, 3, 5, 8, 12], ("language", "languages")),
+]
+
+
+def tier(value, tiers):
+    """(level, prev_threshold, next_threshold|None)"""
+    level = sum(1 for t in tiers if value >= t)
+    prev = tiers[level - 1] if level > 0 else 0
+    nxt = tiers[level] if level < len(tiers) else None
+    return level, prev, nxt
+
+
+def achievements_svg(d):
+    w, tw, th, gap = 810, 240, 100, 20
+    d = dict(d, nlangs=len(d["langs"]))
+    rows = (len(BADGES) + 2) // 3
+    h = 76 + rows * th + (rows - 1) * gap + 24
+    body = header("Achievements", w)
+    unlocked = 0
+    for i, (ico, title, key, tiers, unit) in enumerate(BADGES):
+        val = d[key]
+        level, prev, nxt = tier(val, tiers)
+        unlocked += level > 0
+        x = 25 + (i % 3) * (tw + gap)
+        y = 76 + (i // 3) * (th + gap)
+        on = level > 0
+        op = "1" if on else ".5"
+        stroke = "#8B5CF6" if on else "#2d2a4a"
+        dash = "" if on else ' stroke-dasharray="4 4"'
+        body += f'<g opacity="{op}">'
+        body += (f'<rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="12" fill="#8B5CF6" '
+                 f'fill-opacity="{.10 if on else .03}" stroke="{stroke}"{dash}/>')
+        body += f'<rect x="{x+16}" y="{y+18}" width="44" height="44" rx="12" fill="#8B5CF6" fill-opacity=".18"/>'
+        body += f'<text x="{x+38}" y="{y+48}" text-anchor="middle" style="font-size:22px">{ico}</text>'
+        body += f'<text x="{x+72}" y="{y+32}" class="v" style="font-size:15px">{escape(title)}</text>'
+        body += f'<text x="{x+72}" y="{y+51}" class="m">{val:,} {unit[0] if val == 1 else unit[1]}</text>'
+        lvl = "MAX" if nxt is None else (f"Lv {level}" if on else "Locked")
+        body += (f'<text x="{x+tw-14}" y="{y+32}" text-anchor="end" class="m" '
+                 f'style="font-weight:700;fill:#c4b5fd">{lvl}</text>')
+        pct = 1 if nxt is None else (val - prev) / (nxt - prev)
+        bx, bw = x + 72, tw - 72 - 16
+        body += f'<rect x="{bx}" y="{y+62}" width="{bw}" height="6" rx="3" fill="#2d2a4a"/>'
+        if pct > 0:
+            body += f'<rect x="{bx}" y="{y+62}" width="{max(pct*bw, 6):.1f}" height="6" rx="3" fill="url(#tg)"/>'
+        hint = "All tiers done" if nxt is None else f"Next: {nxt:,}"
+        body += f'<text x="{bx}" y="{y+88}" class="m" style="font-size:11px">{hint}</text>'
+        body += '</g>'
+    body += (f'<text x="{w-25}" y="40" text-anchor="end" class="m" '
+             f'style="font-size:13px">{unlocked}/{len(BADGES)} unlocked</text>')
+    return frame(w, h, body)
+
+
 if __name__ == "__main__":
     data = fetch()
     os.makedirs("assets", exist_ok=True)
     outputs = [("stats", stats_svg), ("languages", langs_svg),
-               ("languages-bars", langs_bars_svg), ("streak", streak_svg)]
+               ("languages-bars", langs_bars_svg), ("streak", streak_svg),
+               ("achievements", achievements_svg)]
     for name, fn in outputs:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
             f.write(fn(data))
