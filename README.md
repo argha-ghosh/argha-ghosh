@@ -23,8 +23,6 @@
 - 🎮 Gamer by passion, developer by choice
 - 📫 Reach me at **arghaghoshriddhi@gmail.com**
 
-Box er moddher ey likha gula ektu boro kora jai na?
-
 
 </td>
 <td width="45%" align="center" valign="middle">
@@ -200,13 +198,12 @@ Standalone GUI applications exploring native desktop architecture and clean code
 
 <div align="center">
 
-<img src="assets/stats.svg" width="360" alt="GitHub Stats"/>
-&nbsp;&nbsp;
-<img src="assets/languages.svg" width="360" alt="Most Used Languages"/>
+<img src="assets/stats.svg" width="400" alt="GitHub Stats"/>
+<img src="assets/languages.svg" width="400" alt="Most Used Languages"/>
 
-<br/><br/>
+<br/>
 
-<img src="assets/streak.svg" width="740" alt="GitHub Streak"/>
+<img src="assets/streak.svg" width="810" alt="GitHub Streak"/>
 
 </div>
 

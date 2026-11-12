@@ -1,4 +1,5 @@
 import os
+import math
 import datetime as dt
 from html import escape
 import requests
@@ -91,53 +92,99 @@ def fetch():
     }
 
 
-def card(title, w, h, body):
+STYLE = (
+    "<style>"
+    "text{font-family:'Segoe UI',-apple-system,Ubuntu,sans-serif;fill:#cdd6f4;font-size:14px}"
+    ".t{font-size:19px;font-weight:700;fill:url(#tg)}"
+    ".v{font-weight:700;fill:#e9d5ff}"
+    ".m{fill:#8b8fa8;font-size:12px}"
+    ".big{font-size:36px;font-weight:800;fill:url(#tg)}"
+    ".lab{font-size:14px;font-weight:600;fill:#c4b5fd}"
+    "</style>"
+)
+
+
+def frame(w, h, inner):
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
-        '<style>text{font-family:-apple-system,Segoe UI,Ubuntu,sans-serif;fill:#cdd6f4;font-size:14px}'
-        '.t{font-size:18px;font-weight:600;fill:#8B5CF6}.v{font-weight:700;fill:#c4b5fd}'
-        '.big{font-size:28px;font-weight:700;fill:#c4b5fd}</style>'
-        f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="10" fill="#1a1b27" stroke="#2d2a4a"/>'
-        f'<text x="25" y="35" class="t">{escape(title)}</text>{body}</svg>'
+        '<defs>'
+        '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#1a1b27"/><stop offset="1" stop-color="#201a3a"/></linearGradient>'
+        '<linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">'
+        '<stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#f0abfc"/></linearGradient>'
+        '<filter id="gl" x="-30%" y="-30%" width="160%" height="160%">'
+        '<feGaussianBlur stdDeviation="4"/></filter>'
+        '</defs>' + STYLE +
+        f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="url(#bg)" stroke="#2d2a4a"/>'
+        + inner + '</svg>'
+    )
+
+
+def header(title, w):
+    return (
+        f'<text x="25" y="40" class="t">{escape(title)}</text>'
+        f'<line x1="25" y1="56" x2="{w-25}" y2="56" stroke="#2d2a4a"/>'
+        '<rect x="25" y="55" width="44" height="3" rx="1.5" fill="#8B5CF6"/>'
     )
 
 
 def stats_svg(d):
-    rows = [("⭐ Total Stars", d["stars"]), ("🕒 Total Commits", d["commits"]),
-            ("🔀 Total PRs", d["prs"]), ("🐞 Total Issues", d["issues"]),
-            ("📦 Contributed To", d["contrib"])]
-    body = ""
-    for i, (label, val) in enumerate(rows):
-        y = 70 + i * 28
-        body += f'<text x="25" y="{y}">{label}</text>'
-        body += f'<text x="335" y="{y}" text-anchor="end" class="v">{val:,}</text>'
-    return card("Argha Ghosh's GitHub Stats", 360, 200, body)
+    w, h = 400, 250
+    rows = [("⭐", "Total Stars", d["stars"]), ("🕒", "Total Commits", d["commits"]),
+            ("🔀", "Total PRs", d["prs"]), ("🐞", "Total Issues", d["issues"]),
+            ("📦", "Contributed To", d["contrib"])]
+    body = header("GitHub Stats", w)
+    for i, (ico, label, val) in enumerate(rows):
+        y = 92 + i * 34
+        body += f'<rect x="25" y="{y-18}" width="26" height="26" rx="7" fill="#8B5CF6" fill-opacity=".15"/>'
+        body += f'<text x="38" y="{y}" text-anchor="middle">{ico}</text>'
+        body += f'<text x="64" y="{y}">{label}</text>'
+        body += f'<text x="375" y="{y}" text-anchor="end" class="v">{val:,}</text>'
+    return frame(w, h, body)
 
 
 def langs_svg(d):
+    w, h = 400, 250
     items = sorted(d["langs"].items(), key=lambda x: x[1]["size"], reverse=True)[:6]
     total = sum(v["size"] for _, v in items) or 1
-    body = ""
+    body = header("Most Used Languages", w)
     for i, (name, v) in enumerate(items):
-        y = 65 + i * 30
+        y = 88 + i * 27
         pct = v["size"] / total
-        body += f'<text x="25" y="{y}">{escape(name)}</text>'
-        body += f'<text x="335" y="{y}" text-anchor="end" class="v">{pct*100:.1f}%</text>'
-        body += f'<rect x="25" y="{y+7}" width="310" height="8" rx="4" fill="#2d2a4a"/>'
-        body += f'<rect x="25" y="{y+7}" width="{max(pct*310, 4):.1f}" height="8" rx="4" fill="{v["color"]}"/>'
-    return card("Most Used Languages", 360, max(200, 65 + len(items) * 30 + 15), body)
+        body += f'<circle cx="30" cy="{y-5}" r="4" fill="{v["color"]}"/>'
+        body += f'<text x="42" y="{y}">{escape(name)}</text>'
+        body += f'<text x="375" y="{y}" text-anchor="end" class="v">{pct*100:.1f}%</text>'
+        body += f'<rect x="25" y="{y+8}" width="350" height="6" rx="3" fill="#2d2a4a"/>'
+        body += f'<rect x="25" y="{y+8}" width="{max(pct*350, 6):.1f}" height="6" rx="3" fill="{v["color"]}"/>'
+    return frame(w, h, body)
 
 
 def streak_svg(d):
-    cols = [("Total Contributions", f"{d['total']:,}"),
-            ("Current Streak", f"{d['current']} days"),
-            ("Longest Streak", f"{d['longest']} days")]
-    body = ""
-    for i, (label, val) in enumerate(cols):
-        cx = 123 + i * 247
-        body += f'<text x="{cx}" y="82" text-anchor="middle" class="big">{val}</text>'
-        body += f'<text x="{cx}" y="108" text-anchor="middle">{label}</text>'
-    return card("Contribution Streak", 740, 125, body)
+    w, h = 810, 170
+    cx, cy, r = w / 2, 84, 46
+    circ = 2 * math.pi * r
+    prog = min(d["current"] / max(d["longest"], 1), 1)
+
+    body = f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#2d2a4a" stroke-width="8"/>'
+    if d["current"] > 0:
+        dash = f'{circ * prog:.1f} {circ:.1f}'
+        body += (
+            f'<g transform="rotate(-90 {cx} {cy})">'
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#8B5CF6" stroke-width="8" '
+            f'stroke-linecap="round" stroke-dasharray="{dash}" filter="url(#gl)" opacity=".7"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="url(#tg)" stroke-width="8" '
+            f'stroke-linecap="round" stroke-dasharray="{dash}"/></g>'
+        )
+    cols = [(135, f"{d['total']:,}", "all time", "Total Contributions"),
+            (cx, f"{d['current']}", "days", "Current Streak"),
+            (675, f"{d['longest']}", "days", "Longest Streak")]
+    for x, num, sub, label in cols:
+        body += f'<text x="{x}" y="90" text-anchor="middle" class="big">{num}</text>'
+        body += f'<text x="{x}" y="110" text-anchor="middle" class="m">{sub}</text>'
+        body += f'<text x="{x}" y="154" text-anchor="middle" class="lab">{label}</text>'
+    body += '<line x1="270" y1="30" x2="270" y2="140" stroke="#2d2a4a"/>'
+    body += '<line x1="540" y1="30" x2="540" y2="140" stroke="#2d2a4a"/>'
+    return frame(w, h, body)
 
 
 if __name__ == "__main__":
