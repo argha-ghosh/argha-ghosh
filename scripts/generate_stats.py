@@ -1,8 +1,14 @@
 import os
+import re
 import math
 import datetime as dt
 from html import escape
-import requests
+import importlib.util
+
+if importlib.util.find_spec("requests") is not None:
+    requests = importlib.import_module("requests")
+else:
+    requests = None
 
 TOKEN = os.environ["GH_TOKEN"]
 USER = os.environ.get("GH_USER", "argha-ghosh")
@@ -526,6 +532,45 @@ def achievements_svg(d):
     return frame(w, h, body)
 
 
+# ---------------------------------------------------------------- colour themes
+# Protiti card-er alada colour. Colour change korte chaile shudhu ekhane hex code bodlao.
+#   a = main accent, b = gradient-er shesh colour, light = label colour, val = number colour,
+#   line = border/track, bg1/bg2 = background gradient, muted = halka text, text = normal text
+def T(a, b, light, val, line, bg1, bg2, muted, text):
+    return dict(a=a, b=b, light=light, val=val, line=line, bg1=bg1, bg2=bg2, muted=muted, text=text)
+
+
+DEFAULT_THEME = T("#8B5CF6", "#f0abfc", "#c4b5fd", "#e9d5ff", "#2d2a4a",
+                  "#1a1b27", "#201a3a", "#8b8fa8", "#cdd6f4")
+
+BLUE = T("#38bdf8", "#818cf8", "#bae6fd", "#e0f2fe", "#1e3a52", "#0f1b2a", "#0f2a3d", "#7d9bb5", "#d6e8f5")
+GREEN = T("#34d399", "#a3e635", "#a7f3d0", "#d1fae5", "#1f4a3c", "#0e1f1b", "#0f2e25", "#7fa896", "#d5efe4")
+ORANGE = T("#fb923c", "#fbbf24", "#fed7aa", "#ffedd5", "#4a2c1a", "#1f1410", "#2e1a10", "#b08a74", "#f3e0d2")
+ROSE = T("#fb7185", "#f472b6", "#fecdd3", "#ffe4e6", "#4a1f2a", "#1f1016", "#2e1420", "#b57c8a", "#f3d9e0")
+PURPLE = DEFAULT_THEME
+TEAL = T("#2dd4bf", "#22d3ee", "#99f6e4", "#ccfbf1", "#1a4545", "#0d1f20", "#0f2e30", "#74a7a5", "#d2eeec")
+INDIGO = T("#818cf8", "#a78bfa", "#c7d2fe", "#e0e7ff", "#26294d", "#101324", "#171a38", "#8a90b8", "#d8dcf5")
+GOLD = T("#f59e0b", "#fde047", "#fde68a", "#fef3c7", "#4a3a12", "#1f1a0d", "#2e2410", "#b09a6a", "#f3e8c8")
+
+THEMES = {
+    "stats": BLUE,
+    "languages": GREEN, "languages-bars": GREEN,
+    "streak": ORANGE,
+    "activity": ROSE,
+    "rhythm": PURPLE,
+    "projects": TEAL,
+    "recent": INDIGO,
+    "achievements": GOLD,
+}
+
+
+def recolor(svg, th):
+    """Default purple palette ke card-er theme colour diye ek pass-e replace kore."""
+    mapping = {DEFAULT_THEME[k]: th[k] for k in DEFAULT_THEME}
+    pattern = "|".join(re.escape(k) for k in mapping)
+    return re.sub(pattern, lambda m: mapping[m.group(0)], svg)
+
+
 OUTPUTS = [
     ("stats", stats_svg), ("languages", langs_svg), ("languages-bars", langs_bars_svg),
     ("streak", streak_svg), ("activity", activity_svg), ("rhythm", rhythm_svg),
@@ -537,7 +582,7 @@ if __name__ == "__main__":
     os.makedirs("assets", exist_ok=True)
     for name, fn in OUTPUTS:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
-            f.write(fn(data))
+            f.write(recolor(fn(data), THEMES.get(name, DEFAULT_THEME)))
     skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30"}
     print("done:", {k: v for k, v in data.items() if k not in skip},
           "| languages:", len(data["langs"]), "| commits sampled:", len(data["commit_log"]))
