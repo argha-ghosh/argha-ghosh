@@ -201,17 +201,15 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 <img src="assets/stats.svg" width="400" alt="GitHub Stats"/>
 <img src="assets/languages.svg" width="400" alt="Most Used Languages"/>
 
-<br/>
+<img src="assets/streak.svg" width="810" alt="Contribution Streak"/>
 
-<img src="assets/streak.svg" width="810" alt="GitHub Streak"/>
+<img src="assets/activity.svg" width="810" alt="Last 30 Days"/>
 
-</div>
+<img src="assets/rhythm.svg" width="810" alt="Coding Rhythm"/>
 
----
+<img src="assets/projects.svg" width="810" alt="Featured Projects"/>
 
-### 🏆 GitHub Achievements
-
-<div align="center">
+<img src="assets/recent.svg" width="810" alt="Latest Activity"/>
 
 <img src="assets/achievements.svg" width="810" alt="Achievements"/>
 

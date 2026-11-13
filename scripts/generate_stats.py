@@ -7,14 +7,19 @@ import requests
 TOKEN = os.environ["GH_TOKEN"]
 USER = os.environ.get("GH_USER", "argha-ghosh")
 HEADERS = {"Authorization": f"bearer {TOKEN}"}
-EXCLUDE_LANGS = set()  # e.g. {"HTML", "CSS"}
-MAX_LANGS = 10         # er beshi language thakle baki gulo "Other" e jabe
+
+EXCLUDE_LANGS = set()   # e.g. {"HTML", "CSS"}
+MAX_LANGS = 10          # er beshi language thakle baki gulo "Other" e jabe
+TZ_OFFSET = 6           # Bangladesh = UTC+6 (commit time chart-er jonno)
+FEATURED = ["PathSathi", "ZonePortal", "GoZayan"]   # Featured Projects (repo-r naam)
+FEATURED_COUNT = 3
+RECENT_COUNT = 5        # Latest Activity te koyta commit
 
 
 def gql(query, variables=None):
     r = requests.post("https://api.github.com/graphql",
                       json={"query": query, "variables": variables or {}},
-                      headers=HEADERS, timeout=60)
+                      headers=HEADERS, timeout=90)
     r.raise_for_status()
     data = r.json()
     if "errors" in data:
@@ -23,16 +28,19 @@ def gql(query, variables=None):
 
 
 BASE = """query($u:String!){user(login:$u){
-  createdAt
+  id createdAt followers{totalCount}
   pullRequests{totalCount} issues{totalCount}
   repositoriesContributedTo(first:1,contributionTypes:[COMMIT,PULL_REQUEST]){totalCount}
 }}"""
 
-REPOS = """query($u:String!,$c:String){user(login:$u){
-  repositories(first:100,after:$c,ownerAffiliations:OWNER,isFork:false){
+REPOS = """query($u:String!,$c:String,$id:ID!){user(login:$u){
+  repositories(first:50,after:$c,ownerAffiliations:OWNER,isFork:false){
     pageInfo{hasNextPage endCursor}
-    nodes{stargazerCount
-      languages(first:10,orderBy:{field:SIZE,direction:DESC}){edges{size node{name color}}}}
+    nodes{name isPrivate description stargazerCount pushedAt
+      primaryLanguage{name color}
+      languages(first:10,orderBy:{field:SIZE,direction:DESC}){edges{size node{name color}}}
+      defaultBranchRef{target{... on Commit{
+        history(first:100,author:{id:$id}){nodes{committedDate messageHeadline}}}}}}
   }}}"""
 
 YEAR = """query($u:String!,$f:DateTime!,$t:DateTime!){user(login:$u){
@@ -41,24 +49,46 @@ YEAR = """query($u:String!,$f:DateTime!,$t:DateTime!){user(login:$u){
     contributionCalendar{weeks{contributionDays{date contributionCount}}}}}}"""
 
 
+def parse_ts(s):
+    return dt.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ")
+
+
+def utc_now():
+    return dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+
+
 def fetch():
     base = gql(BASE, {"u": USER})["user"]
 
     stars, langs, cursor, repo_count = 0, {}, None, 0
+    repo_list, commit_log = [], []
     while True:
-        repos = gql(REPOS, {"u": USER, "c": cursor})["user"]["repositories"]
+        repos = gql(REPOS, {"u": USER, "c": cursor, "id": base["id"]})["user"]["repositories"]
         for repo in repos["nodes"]:
             stars += repo["stargazerCount"]
             repo_count += 1
+            pl = repo.get("primaryLanguage") or {}
+            repo_list.append({
+                "name": repo["name"], "private": repo["isPrivate"],
+                "desc": repo.get("description") or "", "stars": repo["stargazerCount"],
+                "pushed": repo["pushedAt"], "lang": pl.get("name"),
+                "color": pl.get("color") or "#8B5CF6",
+            })
             for e in repo["languages"]["edges"]:
                 name = e["node"]["name"]
                 if name in EXCLUDE_LANGS:
                     continue
                 item = langs.setdefault(name, {"size": 0, "color": e["node"]["color"] or "#8B5CF6"})
                 item["size"] += e["size"]
+            ref = repo.get("defaultBranchRef") or {}
+            hist = (ref.get("target") or {}).get("history") or {}
+            for n in hist.get("nodes") or []:
+                commit_log.append({"date": parse_ts(n["committedDate"]), "repo": repo["name"],
+                                   "private": repo["isPrivate"], "msg": n["messageHeadline"]})
         if not repos["pageInfo"]["hasNextPage"]:
             break
         cursor = repos["pageInfo"]["endCursor"]
+    commit_log.sort(key=lambda c: c["date"], reverse=True)
 
     today = dt.date.today()
     commits, days = 0, {}
@@ -83,17 +113,35 @@ def fetch():
         current += 1
         i -= 1
 
+    last30 = []
+    for k in range(29, -1, -1):
+        day = (today - dt.timedelta(days=k)).isoformat()
+        last30.append((day, days.get(day, 0)))
+
+    hours, wdays = [0] * 24, [0] * 7
+    for c in commit_log:
+        loc = c["date"] + dt.timedelta(hours=TZ_OFFSET)
+        hours[loc.hour] += 1
+        wdays[loc.weekday()] += 1
+
+    created = dt.date.fromisoformat(base["createdAt"][:10])
     return {
         "stars": stars, "commits": commits,
         "prs": base["pullRequests"]["totalCount"],
         "issues": base["issues"]["totalCount"],
         "contrib": base["repositoriesContributedTo"]["totalCount"],
+        "followers": base["followers"]["totalCount"],
+        "age": (today - created).days // 365,
         "total": sum(n for _, n in series),
         "current": current, "longest": longest,
-        "repos": repo_count,
-        "langs": langs,
+        "repos": repo_count, "langs": langs,
+        "repo_list": repo_list, "commit_log": commit_log,
+        "last30": last30, "hours": hours, "wdays": wdays,
+        "night": sum(hours[0:5]), "early": sum(hours[5:9]),
     }
 
+
+# ---------------------------------------------------------------- design
 
 STYLE = (
     "<style>"
@@ -115,6 +163,8 @@ def frame(w, h, inner):
         '<stop offset="0" stop-color="#1a1b27"/><stop offset="1" stop-color="#201a3a"/></linearGradient>'
         '<linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">'
         '<stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#f0abfc"/></linearGradient>'
+        '<linearGradient id="bv" x1="0" y1="1" x2="0" y2="0">'
+        '<stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#f0abfc"/></linearGradient>'
         '<filter id="gl" x="-30%" y="-30%" width="160%" height="160%">'
         '<feGaussianBlur stdDeviation="4"/></filter>'
         '</defs>' + STYLE +
@@ -130,6 +180,30 @@ def header(title, w):
         '<rect x="25" y="55" width="44" height="3" rx="1.5" fill="#8B5CF6"/>'
     )
 
+
+def short(name, n=17):
+    return name if len(name) <= n else name[:n - 1] + "…"
+
+
+def pct_text(p):
+    return "&lt;1%" if p < 0.01 else f"{p * 100:.1f}%"
+
+
+def ago(when):
+    secs = (utc_now() - when).total_seconds()
+    if secs < 3600:
+        return "just now"
+    if secs < 86400:
+        return f"{int(secs // 3600)}h ago"
+    days = int(secs // 86400)
+    if days < 30:
+        return f"{days}d ago"
+    if days < 365:
+        return f"{days // 30}mo ago"
+    return f"{days // 365}y ago"
+
+
+# ---------------------------------------------------------------- cards
 
 def stats_svg(d):
     w, h = 400, 250
@@ -147,7 +221,7 @@ def stats_svg(d):
 
 
 def lang_items(d):
-    """(name, fraction, color) list, boro theke choto. MAX_LANGS er beshi hole 'Other'."""
+    """(name, fraction, color), boro theke choto. MAX_LANGS er beshi hole 'Other'."""
     items = sorted(d["langs"].items(), key=lambda x: x[1]["size"], reverse=True)
     total = sum(v["size"] for _, v in items) or 1
     if len(items) > MAX_LANGS:
@@ -156,14 +230,6 @@ def lang_items(d):
         out.append(("Other", sum(v["size"] for _, v in rest) / total, "#6b7280"))
         return out
     return [(n, v["size"] / total, v["color"]) for n, v in items]
-
-
-def pct_text(p):
-    return "&lt;1%" if p < 0.01 else f"{p * 100:.1f}%"
-
-
-def short(name, n=17):
-    return name if len(name) <= n else name[:n - 1] + "…"
 
 
 def langs_svg(d):
@@ -242,14 +308,173 @@ def streak_svg(d):
     return frame(w, h, body)
 
 
+def activity_svg(d):
+    """Last 30 days contribution bar chart."""
+    w, h = 810, 240
+    data = d["last30"]
+    counts = [n for _, n in data]
+    mx, total, best = max(max(counts), 1), sum(counts), max(counts)
+    body = header("Last 30 Days", w)
+    body += (f'<text x="{w-25}" y="40" text-anchor="end" class="m" style="font-size:13px">'
+             f'{total} contributions · best day {best} · avg {total / len(counts):.1f}/day</text>')
+    base_y, ch = 190, 100
+    slot = 760 / len(data)
+    bw = slot * 0.62
+    for i, (day, n) in enumerate(data):
+        x = 25 + i * slot + (slot - bw) / 2
+        if n:
+            bh = max(n / mx * ch, 6)
+            body += f'<rect x="{x:.1f}" y="{base_y - bh:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="3" fill="url(#bv)"/>'
+            if n == best:
+                body += (f'<text x="{x + bw / 2:.1f}" y="{base_y - bh - 6:.1f}" text-anchor="middle" '
+                         f'class="v" style="font-size:12px">{n}</text>')
+        else:
+            body += f'<rect x="{x:.1f}" y="{base_y - 4}" width="{bw:.1f}" height="4" rx="2" fill="#2d2a4a"/>'
+    body += f'<line x1="25" y1="{base_y + 2}" x2="{w-25}" y2="{base_y + 2}" stroke="#2d2a4a"/>'
+    for i in (0, 7, 14, 21, len(data) - 1):
+        label = dt.date.fromisoformat(data[i][0]).strftime("%b %d")
+        x = 25 + i * slot + slot / 2
+        anchor = "start" if i == 0 else "end" if i == len(data) - 1 else "middle"
+        x = 25 if i == 0 else (w - 25 if i == len(data) - 1 else x)
+        body += f'<text x="{x:.1f}" y="{base_y + 22}" text-anchor="{anchor}" class="m" style="font-size:11px">{label}</text>'
+    return frame(w, h, body)
+
+
+def fmt_hour(hr):
+    return f"{hr % 12 or 12} {'AM' if hr < 12 else 'PM'}"
+
+
+def rhythm_svg(d):
+    """Commit time chart: kon shomoy ar kon din beshi code koro."""
+    w, h = 810, 260
+    hours, wdays = d["hours"], d["wdays"]
+    n = sum(hours)
+    body = header("Coding Rhythm", w)
+    if n == 0:
+        body += '<text x="25" y="95" class="m">Not enough commit data yet.</text>'
+        return frame(w, 120, body)
+
+    buckets = {"Early Bird 🌅": sum(hours[5:12]), "Daytime Coder 🌞": sum(hours[12:18]),
+               "Evening Coder 🌆": sum(hours[18:24]), "Night Owl 🦉": sum(hours[0:5])}
+    label = max(buckets, key=buckets.get)
+    body += f'<text x="{w-25}" y="40" text-anchor="end" class="v" style="font-size:15px">{label}</text>'
+
+    base_y, ch = 195, 95
+    # by hour
+    body += f'<text x="25" y="84" class="m">By hour · UTC+{TZ_OFFSET}</text>'
+    slot, bw, mx = 450 / 24, 12, max(max(hours), 1)
+    top_h = hours.index(max(hours))
+    for i, v in enumerate(hours):
+        x = 25 + i * slot + (slot - bw) / 2
+        if v:
+            bh = max(v / mx * ch, 5)
+            fill = 'fill="url(#bv)"' if i == top_h else 'fill="#8B5CF6" fill-opacity=".45"'
+            body += f'<rect x="{x:.1f}" y="{base_y - bh:.1f}" width="{bw}" height="{bh:.1f}" rx="3" {fill}/>'
+        else:
+            body += f'<rect x="{x:.1f}" y="{base_y - 3}" width="{bw}" height="3" rx="1.5" fill="#2d2a4a"/>'
+    for hr, lab in ((0, "12a"), (6, "6a"), (12, "12p"), (18, "6p"), (23, "11p")):
+        body += (f'<text x="{25 + hr * slot + slot / 2:.1f}" y="{base_y + 20}" text-anchor="middle" '
+                 f'class="m" style="font-size:11px">{lab}</text>')
+
+    # by weekday
+    names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    body += f'<text x="520" y="84" class="m">By weekday</text>'
+    slot2, bw2, mx2 = 265 / 7, 24, max(max(wdays), 1)
+    top_d = wdays.index(max(wdays))
+    for i, v in enumerate(wdays):
+        x = 520 + i * slot2 + (slot2 - bw2) / 2
+        if v:
+            bh = max(v / mx2 * ch, 5)
+            fill = 'fill="url(#bv)"' if i == top_d else 'fill="#8B5CF6" fill-opacity=".45"'
+            body += f'<rect x="{x:.1f}" y="{base_y - bh:.1f}" width="{bw2}" height="{bh:.1f}" rx="4" {fill}/>'
+        else:
+            body += f'<rect x="{x:.1f}" y="{base_y - 3}" width="{bw2}" height="3" rx="1.5" fill="#2d2a4a"/>'
+        body += (f'<text x="{520 + i * slot2 + slot2 / 2:.1f}" y="{base_y + 20}" text-anchor="middle" '
+                 f'class="m" style="font-size:11px">{names[i]}</text>')
+
+    body += f'<line x1="25" y1="{base_y + 2}" x2="475" y2="{base_y + 2}" stroke="#2d2a4a"/>'
+    body += f'<line x1="520" y1="{base_y + 2}" x2="785" y2="{base_y + 2}" stroke="#2d2a4a"/>'
+    body += (f'<text x="25" y="245" class="m">Peak hour: {fmt_hour(top_h)} · Most active day: {names[top_d]}'
+             f' · based on your last {n} commits</text>')
+    return frame(w, h, body)
+
+
+def pick_featured(d):
+    repos = d["repo_list"]
+    by_name = {r["name"].lower(): r for r in repos}
+    picked = [by_name[n.lower()] for n in FEATURED if n.lower() in by_name]
+    if len(picked) < FEATURED_COUNT:
+        others = [r for r in repos if r not in picked and not r["private"]
+                  and r["name"].lower() != USER.lower()]
+        others.sort(key=lambda r: r["pushed"], reverse=True)
+        picked += others[:FEATURED_COUNT - len(picked)]
+    return picked[:FEATURED_COUNT]
+
+
+def projects_svg(d):
+    w, tw, th, gap = 810, 240, 120, 20
+    items = pick_featured(d)
+    body = header("Featured Projects", w)
+    if not items:
+        body += '<text x="25" y="95" class="m">No repositories found.</text>'
+        return frame(w, 120, body)
+    rows = (len(items) + 2) // 3
+    h = 76 + rows * th + (rows - 1) * gap + 24
+    for i, r in enumerate(items):
+        x = 25 + (i % 3) * (tw + gap)
+        y = 76 + (i // 3) * (th + gap)
+        body += (f'<rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="12" fill="#8B5CF6" '
+                 f'fill-opacity=".08" stroke="#8B5CF6" stroke-opacity=".5"/>')
+        ico = "🔒" if r["private"] else "📘"
+        body += f'<text x="{x+16}" y="{y+32}" style="font-size:16px">{ico}</text>'
+        body += f'<text x="{x+40}" y="{y+32}" class="v" style="font-size:15px">{escape(short(r["name"], 20))}</text>'
+        # private repo-r description public SVG-te dekhano hoy na
+        desc = "Private repository" if r["private"] else (r["desc"] or "No description")
+        body += f'<text x="{x+16}" y="{y+56}" class="m">{escape(short(desc, 36))}</text>'
+        if r["lang"]:
+            body += f'<circle cx="{x+20}" cy="{y+80}" r="5" fill="{r["color"]}"/>'
+            body += f'<text x="{x+32}" y="{y+85}" style="font-size:13px">{escape(short(r["lang"], 14))}</text>'
+        body += f'<text x="{x+tw-16}" y="{y+85}" text-anchor="end" style="font-size:13px">⭐ {r["stars"]}</text>'
+        body += f'<text x="{x+16}" y="{y+108}" class="m" style="font-size:11px">Updated {ago(parse_ts(r["pushed"]))}</text>'
+    return frame(w, h, body)
+
+
+def recent_svg(d):
+    w = 810
+    items = d["commit_log"][:RECENT_COUNT]
+    body = header("Latest Activity", w)
+    if not items:
+        body += '<text x="25" y="95" class="m">No recent commits found.</text>'
+        return frame(w, 120, body)
+    h = 76 + len(items) * 34 + 20
+    for i, c in enumerate(items):
+        y = 94 + i * 34
+        # private repo-r commit message public SVG-te dekhano hoy na
+        msg = "Worked on a private repository" if c["private"] else c["msg"]
+        repo = "private" if c["private"] else c["repo"]
+        body += f'<circle cx="34" cy="{y - 4}" r="5" fill="#8B5CF6"/>'
+        if i < len(items) - 1:
+            body += f'<line x1="34" y1="{y + 3}" x2="34" y2="{y + 27}" stroke="#2d2a4a"/>'
+        body += f'<text x="52" y="{y}" style="font-size:13px">{escape(short(msg, 58))}</text>'
+        body += (f'<text x="{w-25}" y="{y}" text-anchor="end" class="m">'
+                 f'{escape(short(repo, 22))} · {ago(c["date"])}</text>')
+    return frame(w, h, body)
+
+
 BADGES = [
-    # (emoji, title, key, tiers, unit)
+    # (emoji, title, key, tiers, (singular, plural))
     ("🕒", "Committer", "commits", [10, 100, 500, 1000, 5000], ("commit", "commits")),
     ("⭐", "Star Collector", "stars", [1, 10, 50, 100, 500], ("star", "stars")),
     ("🔀", "Pull Shark", "prs", [1, 10, 50, 100, 500], ("pull request", "pull requests")),
     ("🔥", "Streak Master", "longest", [3, 7, 30, 100, 365], ("day best streak", "days best streak")),
     ("📦", "Repo Builder", "repos", [1, 5, 10, 25, 50], ("repository", "repositories")),
     ("🌐", "Polyglot", "nlangs", [1, 3, 5, 8, 12], ("language", "languages")),
+    ("🚀", "Rising Star", "followers", [1, 10, 50, 100, 500], ("follower", "followers")),
+    ("📈", "Contributor", "total", [100, 500, 1000, 5000, 10000], ("contribution", "contributions")),
+    ("🏅", "Veteran", "age", [1, 2, 3, 5, 8], ("year on GitHub", "years on GitHub")),
+    ("🐞", "Bug Hunter", "issues", [1, 10, 50, 100, 500], ("issue", "issues")),
+    ("🦉", "Night Owl", "night", [10, 50, 200, 500, 1000], ("late-night commit", "late-night commits")),
+    ("🌅", "Early Bird", "early", [10, 50, 200, 500, 1000], ("early commit", "early commits")),
 ]
 
 
@@ -301,13 +526,18 @@ def achievements_svg(d):
     return frame(w, h, body)
 
 
+OUTPUTS = [
+    ("stats", stats_svg), ("languages", langs_svg), ("languages-bars", langs_bars_svg),
+    ("streak", streak_svg), ("activity", activity_svg), ("rhythm", rhythm_svg),
+    ("projects", projects_svg), ("recent", recent_svg), ("achievements", achievements_svg),
+]
+
 if __name__ == "__main__":
     data = fetch()
     os.makedirs("assets", exist_ok=True)
-    outputs = [("stats", stats_svg), ("languages", langs_svg),
-               ("languages-bars", langs_bars_svg), ("streak", streak_svg),
-               ("achievements", achievements_svg)]
-    for name, fn in outputs:
+    for name, fn in OUTPUTS:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
             f.write(fn(data))
-    print("done:", {k: v for k, v in data.items() if k != "langs"}, "| languages:", len(data["langs"]))
+    skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30"}
+    print("done:", {k: v for k, v in data.items() if k not in skip},
+          "| languages:", len(data["langs"]), "| commits sampled:", len(data["commit_log"]))
