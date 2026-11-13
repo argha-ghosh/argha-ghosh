@@ -226,6 +226,7 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
     <img src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" width="100%"/>
   </picture>
 </div>
+
 ---
 
 ### 🔭 Current Focus
