@@ -148,7 +148,7 @@ def fetch():
         "current_range": current_range, "longest_range": longest_range, "since": created,
         "repos": repo_count, "langs": langs,
         "repo_list": repo_list, "commit_log": commit_log,
-        "last30": last30, "hours": hours, "wdays": wdays,
+        "last30": last30, "hours": hours, "wdays": wdays, "daymap": days,
         "night": sum(hours[0:5]), "early": sum(hours[5:9]),
     }
 
@@ -554,6 +554,111 @@ def achievements_svg(d):
     return frame(w, h, body)
 
 
+PAC_COLORS = ["#1b2347", "#0e4429", "#006d32", "#26a641", "#39d353"]   # empty -> most contributions
+
+
+def contribution_grid(d, weeks=53):
+    """[(week, weekday, count|None)], Sunday-start calendar. Aajker por-er din None."""
+    today = dt.date.today()
+    week_start = today - dt.timedelta(days=(today.weekday() + 1) % 7)
+    start = week_start - dt.timedelta(weeks=weeks - 1)
+    grid = []
+    for wi in range(weeks):
+        for di in range(7):
+            day = start + dt.timedelta(weeks=wi, days=di)
+            grid.append((wi, di, d["daymap"].get(day.isoformat(), 0) if day <= today else None))
+    return grid
+
+
+def level_fn(counts):
+    nz = sorted(c for c in counts if c)
+    if not nz:
+        return lambda c: 0
+    q = [nz[min(int(len(nz) * k), len(nz) - 1)] for k in (0.25, 0.5, 0.75)]
+    return lambda c: 0 if c == 0 else 1 if c <= q[0] else 2 if c <= q[1] else 3 if c <= q[2] else 4
+
+
+def pacman_svg(d):
+    """Pac-Man contribution grid er upor dour-e, cell-gulo khay."""
+    weeks, pitch, cell = 53, 14, 11
+    w, h = 810, 226
+    x0 = (w - weeks * pitch) / 2 + pitch / 2
+    y0 = 92
+    grid = contribution_grid(d, weeks)
+    lv = level_fn([c for _, _, c in grid if c is not None])
+    total = sum(c for _, _, c in grid if c is not None)
+
+    STEP = 0.09                                   # ek cell paar hote koto second
+    n_pts = weeks * 7
+    move = (n_pts - 1) * STEP
+    D = move + 4.0                                # 4s thame, tarpor abar shuru
+    m = move / D
+    flash = STEP * 1.5 / D
+
+    def px(wi):
+        return x0 + wi * pitch
+
+    def py(di):
+        return y0 + di * pitch
+
+    segs = [f"M{px(0):.1f},{py(0):.1f}"]          # serpentine: niche, daane, upore, daane...
+    for wi in range(weeks):
+        segs.append(f"V{py(6 if wi % 2 == 0 else 0):.1f}")
+        if wi < weeks - 1:
+            segs.append(f"H{px(wi + 1):.1f}")
+    path = "".join(segs)
+
+    body = header("Pac-Man Eats My Contributions", w)
+    body += (f'<text x="{w-25}" y="40" text-anchor="end" class="m" style="font-size:13px">'
+             f'{total:,} contributions in the last year</text>')
+
+    for wi, di, c in grid:
+        if c is None:
+            continue
+        L = lv(c)
+        x, y = px(wi) - cell / 2, py(di) - cell / 2
+        if L == 0:
+            body += f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2" fill="{PAC_COLORS[0]}"/>'
+            continue
+        idx = wi * 7 + (di if wi % 2 == 0 else 6 - di)
+        p = max(0.0, (idx - 0.4) * STEP / D)
+        col = PAC_COLORS[L]
+        body += (f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2" fill="{col}">'
+                 f'<animate attributeName="fill" calcMode="discrete" dur="{D:.2f}s" repeatCount="indefinite" '
+                 f'values="{col};#facc15;{PAC_COLORS[0]};{col}" '
+                 f'keyTimes="0;{p:.5f};{p + flash:.5f};0.99"/></rect>')
+
+    def motion(begin=0.0):
+        b = f' begin="{begin}s"' if begin else ""
+        return (f'<animateMotion dur="{D:.2f}s"{b} repeatCount="indefinite" path="{path}" '
+                f'keyPoints="0;1;1" keyTimes="0;{m:.5f};1" calcMode="linear"%s/>')
+
+    def wedge(a, r=7.5):
+        return (f"M0,0 L{r * math.cos(a):.2f},{-r * math.sin(a):.2f} "
+                f"A{r},{r} 0 1 0 {r * math.cos(a):.2f},{r * math.sin(a):.2f} Z")
+
+    ghost_body = ("M-6.5,6.5 V-1 A6.5,6.5 0 0 1 6.5,-1 V6.5 L4.3,4.5 L2.2,6.5 L0,4.5 L-2.2,6.5 L-4.3,4.5 Z")
+    for color, lag in (("#f472b6", 2.6), ("#ef4444", 1.4)):
+        body += (f'<g visibility="hidden"><set attributeName="visibility" to="visible" begin="{lag}s" fill="freeze"/>'
+                 + motion(lag) % "" +
+                 f'<path d="{ghost_body}" fill="{color}"/>'
+                 '<circle cx="-2.4" cy="-1.5" r="1.9" fill="#fff"/><circle cx="2.4" cy="-1.5" r="1.9" fill="#fff"/>'
+                 '<circle cx="-2.4" cy="-1.3" r="0.9" fill="#1e3a8a"/><circle cx="2.4" cy="-1.3" r="0.9" fill="#1e3a8a"/>'
+                 '</g>')
+
+    body += ('<g>' + motion() % ' rotate="auto"' +
+             f'<path fill="#facc15" d="{wedge(0.05)}">'
+             f'<animate attributeName="d" dur="0.3s" repeatCount="indefinite" '
+             f'values="{wedge(0.05)};{wedge(0.7)};{wedge(0.05)}"/></path></g>')
+
+    ly = 208
+    body += f'<text x="{x0 - pitch / 2}" y="{ly + 9}" class="m" style="font-size:11px">Less</text>'
+    for k in range(5):
+        body += f'<rect x="{x0 - pitch / 2 + 32 + k * 15}" y="{ly}" width="11" height="11" rx="2" fill="{PAC_COLORS[k]}"/>'
+    body += f'<text x="{x0 - pitch / 2 + 32 + 5 * 15 + 4}" y="{ly + 9}" class="m" style="font-size:11px">More</text>'
+    return frame(w, h, body)
+
+
 # ---------------------------------------------------------------- colour themes
 # Protiti card-er alada colour. Colour change korte chaile shudhu ekhane hex code bodlao.
 #   a = main accent, b = gradient-er shesh colour, light = label colour, val = number colour,
@@ -572,6 +677,7 @@ ROSE = T("#fb7185", "#f472b6", "#fecdd3", "#ffe4e6", "#4a1f2a", "#1f1016", "#2e1
 PURPLE = DEFAULT_THEME
 TEAL = T("#2dd4bf", "#22d3ee", "#99f6e4", "#ccfbf1", "#1a4545", "#0d1f20", "#0f2e30", "#74a7a5", "#d2eeec")
 INDIGO = T("#818cf8", "#a78bfa", "#c7d2fe", "#e0e7ff", "#26294d", "#101324", "#171a38", "#8a90b8", "#d8dcf5")
+PACMAN = T("#facc15", "#fb923c", "#fde68a", "#fef3c7", "#1f2a52", "#0a0e27", "#0e1438", "#8a93c4", "#d9def7")
 GOLD = T("#f59e0b", "#fde047", "#fde68a", "#fef3c7", "#4a3a12", "#1f1a0d", "#2e2410", "#b09a6a", "#f3e8c8")
 
 THEMES = {
@@ -583,6 +689,7 @@ THEMES = {
     "projects": TEAL,
     "recent": INDIGO,
     "achievements": GOLD,
+    "pacman": PACMAN,
 }
 
 
@@ -597,6 +704,7 @@ OUTPUTS = [
     ("stats", stats_svg), ("languages", langs_svg), ("languages-bars", langs_bars_svg),
     ("streak", streak_svg), ("activity", activity_svg), ("rhythm", rhythm_svg),
     ("projects", projects_svg), ("recent", recent_svg), ("achievements", achievements_svg),
+    ("pacman", pacman_svg),
 ]
 
 if __name__ == "__main__":
@@ -605,6 +713,6 @@ if __name__ == "__main__":
     for name, fn in OUTPUTS:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
             f.write(recolor(fn(data), THEMES.get(name, DEFAULT_THEME)))
-    skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30", "since"}
+    skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30", "since", "daymap"}
     print("done:", {k: v for k, v in data.items() if k not in skip},
           "| languages:", len(data["langs"]), "| commits sampled:", len(data["commit_log"]))

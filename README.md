@@ -217,14 +217,12 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-**🐍 The snake is eating my contributions...**
+**🐍 The pacman is eating my contributions...**
 
 <div align="left">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake.svg"/>
-    <img src="https://raw.githubusercontent.com/argha-ghosh/argha-ghosh/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" width="100%"/>
-  </picture>
+
+<img src="assets/pacman.svg" width="100%" alt="Pac-Man eating my contributions"/>
+
 </div>
 
 ---
