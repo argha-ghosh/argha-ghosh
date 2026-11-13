@@ -3,12 +3,7 @@ import re
 import math
 import datetime as dt
 from html import escape
-import importlib.util
-
-if importlib.util.find_spec("requests") is not None:
-    requests = importlib.import_module("requests")
-else:
-    requests = None
+import requests
 
 TOKEN = os.environ["GH_TOKEN"]
 USER = os.environ.get("GH_USER", "argha-ghosh")
@@ -109,15 +104,25 @@ def fetch():
 
     series = sorted(days.items())
     longest = run = 0
-    for _, n in series:
-        run = run + 1 if n > 0 else 0
-        longest = max(longest, run)
+    run_start, longest_range = None, None
+    for day, n in series:
+        if n > 0:
+            if run == 0:
+                run_start = day
+            run += 1
+            if run >= longest:          # barabori hole shobcheye shomprotik tai nao
+                longest = run
+                longest_range = (run_start, day)
+        else:
+            run = 0
     current, i = 0, len(series) - 1
     if i >= 0 and series[i][1] == 0:  # aajke ekhono commit na korle kal theke gono
         i -= 1
+    cur_end = series[i][0] if i >= 0 else None
     while i >= 0 and series[i][1] > 0:
         current += 1
         i -= 1
+    current_range = (series[i + 1][0], cur_end) if current else None
 
     last30 = []
     for k in range(29, -1, -1):
@@ -140,6 +145,7 @@ def fetch():
         "age": (today - created).days // 365,
         "total": sum(n for _, n in series),
         "current": current, "longest": longest,
+        "current_range": current_range, "longest_range": longest_range, "since": created,
         "repos": repo_count, "langs": langs,
         "repo_list": repo_list, "commit_log": commit_log,
         "last30": last30, "hours": hours, "wdays": wdays,
@@ -286,8 +292,23 @@ def langs_bars_svg(d):
     return frame(w, h, body)
 
 
+def fmt_range(rng):
+    """('2026-11-03','2026-11-14') -> 'Nov 03 – Nov 14, 2026'"""
+    if not rng:
+        return "No active streak"
+    s = dt.date.fromisoformat(rng[0])
+    e = dt.date.fromisoformat(rng[1])
+    if s == e:
+        return f"{s:%b %d, %Y}"
+    if e == dt.date.today():
+        return f"{s:%b %d, %Y} – Today"
+    if s.year == e.year:
+        return f"{s:%b %d} – {e:%b %d, %Y}"
+    return f"{s:%b %d, %Y} – {e:%b %d, %Y}"
+
+
 def streak_svg(d):
-    w, h = 810, 170
+    w, h = 810, 196
     cx, cy, r = w / 2, 84, 46
     circ = 2 * math.pi * r
     prog = min(d["current"] / max(d["longest"], 1), 1)
@@ -302,15 +323,16 @@ def streak_svg(d):
             f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="url(#tg)" stroke-width="8" '
             f'stroke-linecap="round" stroke-dasharray="{dash}"/></g>'
         )
-    cols = [(135, f"{d['total']:,}", "all time", "Total Contributions"),
-            (cx, f"{d['current']}", "days", "Current Streak"),
-            (675, f"{d['longest']}", "days", "Longest Streak")]
-    for x, num, sub, label in cols:
+    cols = [(135, f"{d['total']:,}", "all time", "Total Contributions", f"Since {d['since']:%b %Y}"),
+            (cx, f"{d['current']}", "days", "Current Streak", fmt_range(d["current_range"])),
+            (675, f"{d['longest']}", "days", "Longest Streak", fmt_range(d["longest_range"]))]
+    for x, num, sub, label, rng in cols:
         body += f'<text x="{x}" y="90" text-anchor="middle" class="big">{num}</text>'
         body += f'<text x="{x}" y="110" text-anchor="middle" class="m">{sub}</text>'
         body += f'<text x="{x}" y="154" text-anchor="middle" class="lab">{label}</text>'
-    body += '<line x1="270" y1="30" x2="270" y2="140" stroke="#2d2a4a"/>'
-    body += '<line x1="540" y1="30" x2="540" y2="140" stroke="#2d2a4a"/>'
+        body += f'<text x="{x}" y="174" text-anchor="middle" class="m">{escape(rng)}</text>'
+    body += '<line x1="270" y1="30" x2="270" y2="170" stroke="#2d2a4a"/>'
+    body += '<line x1="540" y1="30" x2="540" y2="170" stroke="#2d2a4a"/>'
     return frame(w, h, body)
 
 
@@ -583,6 +605,6 @@ if __name__ == "__main__":
     for name, fn in OUTPUTS:
         with open(f"assets/{name}.svg", "w", encoding="utf-8") as f:
             f.write(recolor(fn(data), THEMES.get(name, DEFAULT_THEME)))
-    skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30"}
+    skip = {"langs", "repo_list", "commit_log", "hours", "wdays", "last30", "since"}
     print("done:", {k: v for k, v in data.items() if k not in skip},
           "| languages:", len(data["langs"]), "| commits sampled:", len(data["commit_log"]))
