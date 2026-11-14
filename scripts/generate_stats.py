@@ -1,6 +1,7 @@
 import os
 import re
 import math
+import random
 import datetime as dt
 from html import escape
 import requests
@@ -579,21 +580,16 @@ def level_fn(counts):
 
 
 def pacman_svg(d):
-    """Pac-Man contribution grid er upor dour-e, cell-gulo khay."""
+    """Pac-Man age kom contribution (level 1) khay, tarpor beshi (level 4). Ghost-gulo shob shomoy ghure beray."""
     weeks, pitch, cell = 53, 14, 11
     w, h = 810, 226
     x0 = (w - weeks * pitch) / 2 + pitch / 2
     y0 = 92
     grid = contribution_grid(d, weeks)
-    lv = level_fn([c for _, _, c in grid if c is not None])
-    total = sum(c for _, _, c in grid if c is not None)
-
-    STEP = 0.09                                   # ek cell paar hote koto second
-    n_pts = weeks * 7
-    move = (n_pts - 1) * STEP
-    D = move + 4.0                                # 4s thame, tarpor abar shuru
-    m = move / D
-    flash = STEP * 1.5 / D
+    present = {(wi, di): c for wi, di, c in grid if c is not None}
+    lv = level_fn(list(present.values()))
+    total = sum(present.values())
+    targets = {pos: lv(c) for pos, c in present.items() if c > 0}
 
     def px(wi):
         return x0 + wi * pitch
@@ -601,61 +597,120 @@ def pacman_svg(d):
     def py(di):
         return y0 + di * pitch
 
-    segs = [f"M{px(0):.1f},{py(0):.1f}"]          # serpentine: niche, daane, upore, daane...
-    for wi in range(weeks):
-        segs.append(f"V{py(6 if wi % 2 == 0 else 0):.1f}")
-        if wi < weeks - 1:
-            segs.append(f"H{px(wi + 1):.1f}")
-    path = "".join(segs)
+    def walk(cur, goal, flip, verts):
+        """cur theke goal e L-shaped chaal (grid-er line dhore). Koyta cell chollo return kore."""
+        (c0, r0), (c1, r1) = cur, goal
+        if c0 != c1 and r0 != r1:
+            verts.append((c1, r0) if not flip else (c0, r1))
+        if cur != goal:
+            verts.append(goal)
+        return abs(c1 - c0) + abs(r1 - r0)
+
+    def to_path(verts):
+        return "M" + " L".join(f"{px(c):.1f},{py(r):.1f}" for c, r in verts)
+
+    # ---- Pac-Man-er route: level 1 -> 4, protiti level-e nearest-neighbour
+    start = (0, 3)
+    order, cur = [], start
+    for level in (1, 2, 3, 4):
+        left = [pos for pos, l in targets.items() if l == level]
+        while left:
+            nxt = min(left, key=lambda q: (abs(q[0] - cur[0]) + abs(q[1] - cur[1]), q[0], q[1]))
+            left.remove(nxt)
+            order.append((nxt, level))
+            cur = nxt
+
+    verts, steps, arrive, cur, flip = [start], 0, [], start, False
+    for pos, level in order + [(start, 0)]:       # shesh-e start-e fire ashe, tai loop-e jump hoy na
+        steps += walk(cur, pos, flip, verts)
+        flip = not flip
+        if level:
+            arrive.append((pos, level, steps))
+        cur = pos
+
+    total_steps = max(steps, 1)
+    STEP = min(0.09, max(0.03, 38.0 / total_steps))   # ek cell paar hote koto second
+    move = total_steps * STEP
+    D = move + 4.0                                    # 4s thame, tarpor cell-gulo fire ashe
+    m = move / D
+    flash = STEP * 1.5 / D
+    path = to_path(verts)
 
     body = header("Pac-Man Eats My Contributions", w)
     body += (f'<text x="{w-25}" y="40" text-anchor="end" class="m" style="font-size:13px">'
              f'{total:,} contributions in the last year</text>')
 
+    # ---- cell-gulo
+    eat_at = {pos: max(0.0, (st - 0.4) * STEP / D) for pos, _, st in arrive}
+    windows = {}
     for wi, di, c in grid:
         if c is None:
             continue
-        L = lv(c)
         x, y = px(wi) - cell / 2, py(di) - cell / 2
+        L = targets.get((wi, di), 0)
         if L == 0:
             body += f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2" fill="{PAC_COLORS[0]}"/>'
             continue
-        idx = wi * 7 + (di if wi % 2 == 0 else 6 - di)
-        p = max(0.0, (idx - 0.4) * STEP / D)
+        p = eat_at[(wi, di)]
+        a, b = windows.get(L, (p, p))
+        windows[L] = (min(a, p), max(b, p + flash))
         col = PAC_COLORS[L]
         body += (f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="2" fill="{col}">'
                  f'<animate attributeName="fill" calcMode="discrete" dur="{D:.2f}s" repeatCount="indefinite" '
                  f'values="{col};#facc15;{PAC_COLORS[0]};{col}" '
                  f'keyTimes="0;{p:.5f};{p + flash:.5f};0.99"/></rect>')
 
-    def motion(begin=0.0):
-        b = f' begin="{begin}s"' if begin else ""
-        return (f'<animateMotion dur="{D:.2f}s"{b} repeatCount="indefinite" path="{path}" '
-                f'keyPoints="0;1;1" keyTimes="0;{m:.5f};1" calcMode="linear"%s/>')
-
-    def wedge(a, r=7.5):
-        return (f"M0,0 L{r * math.cos(a):.2f},{-r * math.sin(a):.2f} "
-                f"A{r},{r} 0 1 0 {r * math.cos(a):.2f},{r * math.sin(a):.2f} Z")
-
-    ghost_body = ("M-6.5,6.5 V-1 A6.5,6.5 0 0 1 6.5,-1 V6.5 L4.3,4.5 L2.2,6.5 L0,4.5 L-2.2,6.5 L-4.3,4.5 Z")
-    for color, lag in (("#f472b6", 2.6), ("#ef4444", 1.4)):
-        body += (f'<g visibility="hidden"><set attributeName="visibility" to="visible" begin="{lag}s" fill="freeze"/>'
-                 + motion(lag) % "" +
+    # ---- ghost-gulo: shob shomoy random ghure beray (cycle-er shathe loop)
+    rng = random.Random(2024)
+    ghost_body = "M-6.5,6.5 V-1 A6.5,6.5 0 0 1 6.5,-1 V6.5 L4.3,4.5 L2.2,6.5 L0,4.5 L-2.2,6.5 L-4.3,4.5 Z"
+    for color in ("#ef4444", "#f472b6", "#22d3ee", "#fb923c"):
+        gstart = (rng.randrange(weeks), rng.randrange(7))
+        gv, gsteps, gcur, gflip = [gstart], 0, gstart, False
+        while gsteps < D / 0.12:
+            goal = (rng.randrange(weeks), rng.randrange(7))
+            if goal == gcur:
+                continue
+            gsteps += walk(gcur, goal, gflip, gv)
+            gflip = rng.random() < 0.5
+            gcur = goal
+        walk(gcur, gstart, gflip, gv)             # closed loop
+        body += (f'<g><animateMotion dur="{D:.2f}s" repeatCount="indefinite" path="{to_path(gv)}"/>'
                  f'<path d="{ghost_body}" fill="{color}"/>'
                  '<circle cx="-2.4" cy="-1.5" r="1.9" fill="#fff"/><circle cx="2.4" cy="-1.5" r="1.9" fill="#fff"/>'
                  '<circle cx="-2.4" cy="-1.3" r="0.9" fill="#1e3a8a"/><circle cx="2.4" cy="-1.3" r="0.9" fill="#1e3a8a"/>'
                  '</g>')
 
-    body += ('<g>' + motion() % ' rotate="auto"' +
-             f'<path fill="#facc15" d="{wedge(0.05)}">'
+    # ---- Pac-Man
+    def wedge(a, r=7.5):
+        return (f"M0,0 L{r * math.cos(a):.2f},{-r * math.sin(a):.2f} "
+                f"A{r},{r} 0 1 0 {r * math.cos(a):.2f},{r * math.sin(a):.2f} Z")
+
+    if len(verts) > 1:
+        motion = (f'<animateMotion dur="{D:.2f}s" repeatCount="indefinite" path="{path}" rotate="auto" '
+                  f'keyPoints="0;1;1" keyTimes="0;{m:.5f};1" calcMode="linear"/>')
+        group = "<g>"
+    else:
+        motion = ""
+        group = f'<g transform="translate({px(start[0]):.1f},{py(start[1]):.1f})">'
+    body += (group + motion + f'<path fill="#facc15" d="{wedge(0.05)}">'
              f'<animate attributeName="d" dur="0.3s" repeatCount="indefinite" '
              f'values="{wedge(0.05)};{wedge(0.7)};{wedge(0.05)}"/></path></g>')
 
-    ly = 208
-    body += f'<text x="{x0 - pitch / 2}" y="{ly + 9}" class="m" style="font-size:11px">Less</text>'
+    # ---- legend: Pac-Man ekhon kon level khacche sheta jole uthe
+    ly, lx = 208, x0 - pitch / 2
+    body += f'<text x="{lx}" y="{ly + 9}" class="m" style="font-size:11px">Less</text>'
     for k in range(5):
-        body += f'<rect x="{x0 - pitch / 2 + 32 + k * 15}" y="{ly}" width="11" height="11" rx="2" fill="{PAC_COLORS[k]}"/>'
-    body += f'<text x="{x0 - pitch / 2 + 32 + 5 * 15 + 4}" y="{ly + 9}" class="m" style="font-size:11px">More</text>'
+        hl = ""
+        if k in windows:
+            a, b = windows[k]
+            hl = (f' stroke="#facc15" stroke-width="1.5" stroke-opacity="0"><animate attributeName="stroke-opacity" '
+                  f'calcMode="discrete" dur="{D:.2f}s" repeatCount="indefinite" values="0;1;0" '
+                  f'keyTimes="0;{a:.5f};{min(b + 0.004, 0.99):.5f}"/></rect')
+        body += (f'<rect x="{lx + 32 + k * 15}" y="{ly}" width="11" height="11" rx="2" fill="{PAC_COLORS[k]}"'
+                 + (hl + '>' if hl else '/>'))
+    body += f'<text x="{lx + 32 + 5 * 15 + 4}" y="{ly + 9}" class="m" style="font-size:11px">More</text>'
+    body += (f'<text x="{w - 25 - 9}" y="{ly + 9}" text-anchor="end" class="m" style="font-size:11px">'
+             f'Pac-Man eats from less to more</text>')
     return frame(w, h, body)
 
 
