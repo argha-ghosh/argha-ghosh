@@ -14,22 +14,7 @@
 <a href="https://www.instagram.com/argha_heree/"><img src="https://img.icons8.com/color/48/instagram-new.png" width="48" height="48" alt="Instagram"/></a>&nbsp;&nbsp;&nbsp;
 <a href="mailto:arghaghoshriddhi@gmail.com"><img src="https://img.icons8.com/color/48/gmail-new.png" width="48" height="48" alt="Gmail"/></a>&nbsp;&nbsp;&nbsp;
 <a href="mailto:argha2023@outlook.com"><img src="https://img.icons8.com/color/48/microsoft-outlook-2019.png" width="48" height="48" alt="Outlook"/></a>&nbsp;&nbsp;&nbsp;
-
-<a href="https://teams.microsoft.com/l/chat/0/0?users=23-50804-1@student.aiub.edu"
-   target="_blank"
-   style="display:inline-flex; width:60px; height:60px; align-items:center; justify-content:center; background:#e9edf3; border-radius:9px; text-decoration:none;">
-
-  <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-    <rect x="3" y="7" width="29" height="34" rx="5" fill="#5059C9"/>
-    <rect x="17" y="12" width="28" height="25" rx="5" fill="#7B83EB"/>
-    <circle cx="37" cy="9" r="6" fill="#5059C9"/>
-    <circle cx="10" cy="15" r="5" fill="#7B83EB"/>
-    <path d="M24 17h14v4h-5v14h-4V21h-5z" fill="white"/>
-    <path d="M7 24h12v4H7z" fill="white" opacity=".9"/>
-  </svg>
-
-</a>
-
+<a href="https://teams.microsoft.com/l/chat/0/0?users=23-50804-1@student.aiub.edu"><img src="https://img.shields.io/badge/Microsoft_Teams-6264A7?style=for-the-badge&logo=microsoftteams&logoColor=white" height="48" alt="Microsoft Teams"/></a>&nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/argha-ghosh-2a1117416/"><img src="https://img.icons8.com/color/48/linkedin.png" width="48" height="48" alt="LinkedIn"/></a>
 
 </div>
