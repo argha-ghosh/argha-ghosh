@@ -228,7 +228,7 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-**🐍 The pacman is eating my contributions...**
+**ᗧ· · · · 👻 This pacman is eating my contributions**
 
 <div align="left">
 
@@ -278,17 +278,6 @@ focus:
 </div>
 
 ---
-
-### 🌐 Let's Connect
-
-<div align="left">
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/argha-ghosh)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YOUR_FB_USERNAME)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/YOUR_IG_USERNAME)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arghaghoshriddhi@gmail.com)
-
-<br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
 
