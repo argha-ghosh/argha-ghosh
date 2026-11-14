@@ -14,7 +14,14 @@
 <a href="https://www.instagram.com/argha_heree/"><img src="https://img.icons8.com/color/48/instagram-new.png" width="48" height="48" alt="Instagram"/></a>&nbsp;&nbsp;&nbsp;
 <a href="mailto:arghaghoshriddhi@gmail.com"><img src="https://img.icons8.com/color/48/gmail-new.png" width="48" height="48" alt="Gmail"/></a>&nbsp;&nbsp;&nbsp;
 <a href="mailto:argha2023@outlook.com"><img src="https://img.icons8.com/color/48/microsoft-outlook-2019.png" width="48" height="48" alt="Outlook"/></a>&nbsp;&nbsp;&nbsp;
-<a href="https://teams.microsoft.com/l/chat/0/0?users=23-50804-1@student.aiub.edu"><img src="https://img.icons8.com/color/48/microsoft-teams-2019.png" width="48" height="48" alt="Microsoft Teams"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://teams.microsoft.com/l/chat/0/0?users=23-50804-1@student.aiub.edu">
+    <img
+        src="https://cdn.simpleicons.org/microsoftteams/6264A7"
+        width="48"
+        height="48"
+        alt="Microsoft Teams"
+    />
+</a>
 <a href="https://www.linkedin.com/in/argha-ghosh-2a1117416/"><img src="https://img.icons8.com/color/48/linkedin.png" width="48" height="48" alt="LinkedIn"/></a>
 
 </div>
