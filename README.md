@@ -6,6 +6,30 @@
 
 <img src="assets/computer.svg" alt="Argha Ghosh - computer boot animation" width="100%"/>
 
+<br/><br/>
+
+<h3>🌐 Connect With Me</h3>
+
+<a href="https://www.facebook.com/arghaghosh.aqurbo" target="_blank">
+  <img src="https://img.icons8.com/color/48/facebook-new.png" width="48" height="48" alt="Facebook"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://www.instagram.com/argha_heree/" target="_blank">
+  <img src="https://img.icons8.com/color/48/instagram-new.png" width="48" height="48" alt="Instagram"/>
+</a>
+&nbsp;&nbsp;
+<a href="mailto:arghaghoshriddhi@gmail.com">
+  <img src="https://img.icons8.com/color/48/gmail-new.png" width="48" height="48" alt="Gmail"/>
+</a>
+&nbsp;&nbsp;
+<a href="mailto:argha2023@outlook.com">
+  <img src="https://img.icons8.com/color/48/microsoft-outlook-2019.png" width="48" height="48" alt="Outlook"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/argha-ghosh-2a1117416/" target="_blank">
+  <img src="https://img.icons8.com/color/48/linkedin.png" width="48" height="48" alt="LinkedIn"/>
+</a>
+
 </div>
 
 ---
