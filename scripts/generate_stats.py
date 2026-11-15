@@ -17,6 +17,8 @@ TZ_OFFSET = 6           # Bangladesh = UTC+6 (commit time chart-er jonno)
 FEATURED = ["PathSathi", "ZonePortal", "GoZayan"]   # Featured Projects (repo-r naam)
 FEATURED_COUNT = 3
 RECENT_COUNT = 5        # Latest Activity te koyta commit
+RECENT_DAYS = 14        # koto din-er moddhe nijer commit thakle "Updated ..." dekhabe
+PROJECTS_ONLY_RECENT = False   # True hole Featured Projects-e shudhu recently update howa repo-i dekhabe
 
 
 def gql(query, variables=None):
@@ -75,7 +77,7 @@ def fetch():
                 "name": repo["name"], "private": repo["isPrivate"],
                 "desc": repo.get("description") or "", "stars": repo["stargazerCount"],
                 "pushed": repo["pushedAt"], "lang": pl.get("name"),
-                "color": pl.get("color") or "#8B5CF6",
+                "color": pl.get("color") or "#8B5CF6", "last_commit": None,
             })
             for e in repo["languages"]["edges"]:
                 name = e["node"]["name"]
@@ -85,6 +87,8 @@ def fetch():
                 item["size"] += e["size"]
             ref = repo.get("defaultBranchRef") or {}
             hist = (ref.get("target") or {}).get("history") or {}
+            dates = [parse_ts(n["committedDate"]) for n in hist.get("nodes") or []]
+            repo_list[-1]["last_commit"] = max(dates) if dates else None   # tomar nijer shesh commit
             for n in hist.get("nodes") or []:
                 commit_log.append({"date": parse_ts(n["committedDate"]), "repo": repo["name"],
                                    "private": repo["isPrivate"], "msg": n["messageHeadline"]})
@@ -429,14 +433,22 @@ def rhythm_svg(d):
     return frame(w, h, body)
 
 
+def is_recent(r):
+    return bool(r["last_commit"]) and (utc_now() - r["last_commit"]).days <= RECENT_DAYS
+
+
 def pick_featured(d):
     repos = d["repo_list"]
+    if PROJECTS_ONLY_RECENT:        # shudhu recently update howa repo, notun theke purano
+        rec = [r for r in repos if is_recent(r) and r["name"].lower() != USER.lower()]
+        rec.sort(key=lambda r: r["last_commit"], reverse=True)
+        return rec[:FEATURED_COUNT]
     by_name = {r["name"].lower(): r for r in repos}
     picked = [by_name[n.lower()] for n in FEATURED if n.lower() in by_name]
     if len(picked) < FEATURED_COUNT:
         others = [r for r in repos if r not in picked and not r["private"]
                   and r["name"].lower() != USER.lower()]
-        others.sort(key=lambda r: r["pushed"], reverse=True)
+        others.sort(key=lambda r: r["last_commit"] or dt.datetime.min, reverse=True)
         picked += others[:FEATURED_COUNT - len(picked)]
     return picked[:FEATURED_COUNT]
 
@@ -446,7 +458,9 @@ def projects_svg(d):
     items = pick_featured(d)
     body = header("Featured Projects", w)
     if not items:
-        body += '<text x="25" y="95" class="m">No repositories found.</text>'
+        msg = (f"No project updates in the last {RECENT_DAYS} days." if PROJECTS_ONLY_RECENT
+               else "No repositories found.")
+        body += f'<text x="25" y="95" class="m">{msg}</text>'
         return frame(w, 120, body)
     rows = (len(items) + 2) // 3
     h = 76 + rows * th + (rows - 1) * gap + 24
@@ -465,7 +479,9 @@ def projects_svg(d):
             body += f'<circle cx="{x+20}" cy="{y+80}" r="5" fill="{r["color"]}"/>'
             body += f'<text x="{x+32}" y="{y+85}" style="font-size:13px">{escape(short(r["lang"], 14))}</text>'
         body += f'<text x="{x+tw-16}" y="{y+85}" text-anchor="end" style="font-size:13px">⭐ {r["stars"]}</text>'
-        body += f'<text x="{x+16}" y="{y+108}" class="m" style="font-size:11px">Updated {ago(parse_ts(r["pushed"]))}</text>'
+        if is_recent(r):            # nijer commit RECENT_DAYS-er moddhe hole-i "Updated" dekhay
+            body += (f'<text x="{x+16}" y="{y+108}" class="m" style="font-size:11px">'
+                     f'Updated {ago(r["last_commit"])}</text>')
     return frame(w, h, body)
 
 
