@@ -240,47 +240,52 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ### 🔭 Current Focus
 
-<div align="left">
+<table align="left" width="100%">
+<tr>
+<td width="50%" valign="top">
 
-focus:
-  learning:
-    - Advanced TypeScript patterns
-    - Clean architecture & SOLID principles
-  building:
-    - PathSathi (React Native + Expo + ASP.NET Core)
-    - ZonePortal (NestJS + PostgreSQL + Next.js)
-  exploring:
-    - Desktop application development (C# / .NET)
-  open_to:
-    - Internships & collaborative projects
-    - Full-stack development opportunities
+**📚 Learning**
+- Advanced TypeScript patterns
+- Clean architecture & SOLID principles
 
-</div>
+</td>
+<td width="50%" valign="top">
+
+**🛠️ Building**
+- **PathSathi** — React Native + Expo + ASP.NET Core
+- **Zero Hunger** — ASP .NET + SSMS-v24 + ASP .NET Core Web Application
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**🧠 Studying — NLP Course**
+- Natural Language Processing fundamentals
+- Text preprocessing, classification & language models
+- Hands-on work with Python & Jupyter Notebook
+- Course project: [NLP-Project](https://github.com/argha-ghosh/NLP-Project)
+
+</td>
+<td width="50%" valign="top">
+
+**🧭 Exploring**
+- Desktop application development (C# / .NET)
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+
+</td>
+</tr>
+</table>
 
 ---
 
-### 🎮 Fun Facts
-
 <div align="left">
 
-<details>
-<summary><b>Click to reveal</b></summary>
-
-<br/>
-
-- 🎮 Gamer first, developer second (or is it the other way around?)
-- 🖥️ Desktop apps are my favorite playground — ask me anything about C# / .NET
-- 🧹 I prefer clean, maintainable code over quick hacks
-- ☕ Code → Commit → Push → Repeat
-
-</details>
-
-</div>
-
----
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1500&color=8B5CF6&vCenter=true&width=420&lines=Thanks+for+stopping+by!+%E2%9C%A8;Let's+build+something+great+together." alt="Footer typing"/>
-
-<sub>💾 Code. Add. Commit. Push. Repeat.</sub>
+<h2>💾 <b>Code. Add. Commit. Push. Repeat.</b></h2>
 
 </div>
