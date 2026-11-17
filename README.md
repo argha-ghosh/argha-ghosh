@@ -284,8 +284,8 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-<div align="left">
+<div align="Center">
 
-<h2>💾 <b>Code. Add. Commit. Push. Repeat.</b></h2>
+<h4>💾 <b>Code. Add. Commit. Push. Repeat.</b></h4>
 
 </div>
