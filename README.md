@@ -284,8 +284,8 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-<div align="Center">
+<div align="left">
 
-<h4>💾 <b>Code. Add. Commit. Push. Repeat.</b></h4>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,100:f0abfc&height=180&section=footer&text=Code.%20Add.%20Commit.%20Push.%20Repeat.&fontSize=44&fontColor=ffffff&fontAlignY=62" width="100%" alt="Code. Add. Commit. Push. Repeat."/>
 
 </div>
