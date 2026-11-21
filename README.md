@@ -111,14 +111,20 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ### 🌍 Live Project
 
+### 🌍 Live Project
+
 <a href="https://gozayan.kesug.com/">
+  <img src="assets/live-project.svg" width="100%" alt="Live project - click to visit"/>
+</a>
+
+<!-- <a href="https://gozayan.kesug.com/">
   <img src="assets/live-preview.png" width="100%" alt="Project landing page"/>
 </a>
 
 **GoZayan** — A role-based flight ticket booking platform covering Admin, Manager, and Passenger workflows, with an airline-industry visual style and analytics dashboard..
 
 <a href="https://gozayan.kesug.com/"><img src="https://img.shields.io/badge/Live_Demo-Visit_Site-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/></a>
-<a href="https://github.com/argha-ghosh/Online-flight-ticket-booking-system"><img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
+<a href="https://github.com/argha-ghosh/Online-flight-ticket-booking-system"><img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a> -->
 
 ### 🚀 Featured Projects
 
