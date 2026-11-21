@@ -111,10 +111,8 @@ I'm a Computer Science student building real, working software — from full-sta
 
 ### 🌍 Live Project
 
-### 🌍 Live Project
-
 <a href="https://gozayan.kesug.com/">
-  <img src="assets/live-project.svg" width="100%" alt="Live project - click to visit"/>
+  <img src="assets/live-project.svg" width="100%" alt="GoZayan - click to visit the live site"/>
 </a>
 
 <!-- <a href="https://gozayan.kesug.com/">
