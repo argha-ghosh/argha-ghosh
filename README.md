@@ -115,14 +115,23 @@ I'm a Computer Science student building real, working software — from full-sta
   <img src="assets/live-project.svg" width="100%" alt="GoZayan - click to visit the live site"/>
 </a>
 
-<!-- <a href="https://gozayan.kesug.com/">
-  <img src="assets/live-preview.png" width="100%" alt="Project landing page"/>
-</a>
+### About this project
 
-**GoZayan** — A role-based flight ticket booking platform covering Admin, Manager, and Passenger workflows, with an airline-industry visual style and analytics dashboard..
+<details>
+<summary><b>✈️ GoZayan —Online Flight Booking System</b></summary>
 
-<a href="https://gozayan.kesug.com/"><img src="https://img.shields.io/badge/Live_Demo-Visit_Site-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/></a>
-<a href="https://github.com/argha-ghosh/Online-flight-ticket-booking-system"><img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a> -->
+<br/>
+
+A role-based flight ticket booking platform covering Admin, Manager, and Passenger workflows, with an airline-industry visual style and analytics dashboard.
+
+| Field | Detail |
+|---|---|
+| **Stack** | PHP · MySQL · JavaScript · XAMPP |
+| **Role** | Solo Developer |
+| **Highlights** | IATA airport-code cards, notification system, Chart.js analytics dashboard |
+| **Repository** | [View Repo](https://github.com/argha-ghosh/Online-flight-ticket-booking-system) |
+
+</details>
 
 ### 🚀 Featured Projects
 
@@ -168,8 +177,8 @@ A full-stack civic complaint management platform built for a university course, 
 
 </details>
 
-<details>
-<summary><b>✈️ GoZayan — Flight Booking System</b></summary>
+<!-- <details>
+<summary><b>✈️ GoZayan —Online Flight Booking System</b></summary>
 
 <br/>
 
@@ -182,7 +191,7 @@ A role-based flight ticket booking platform covering Admin, Manager, and Passeng
 | **Highlights** | IATA airport-code cards, notification system, Chart.js analytics dashboard |
 | **Repository** | [View Repo](https://github.com/argha-ghosh/Online-flight-ticket-booking-system) |
 
-</details>
+</details> -->
 
 <details>
 <summary><b>🍽️ Restaurant Management System</b></summary>
