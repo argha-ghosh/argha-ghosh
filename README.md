@@ -133,6 +133,8 @@ A role-based flight ticket booking platform covering Admin, Manager, and Passeng
 
 </details>
 
+---
+
 ### 🚀 Featured Projects
 
 <details>
