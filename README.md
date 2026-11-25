@@ -231,8 +231,6 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-// Hi, I am Argha Ghosh
-
 ### 📊 GitHub Statistics
 
 <div align="center">
