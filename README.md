@@ -231,7 +231,6 @@ A .NET Web API that coordinates restaurant food donations, rider collection, and
 
 ---
 
-//----------------------
 
 ### 📊 GitHub Statistics
 
